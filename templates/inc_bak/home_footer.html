@@ -1,0 +1,48 @@
+<!--BEGIN FOOTER-->
+<div id="connect"></div>
+
+<div id="footer">
+<div id="footerHeader">Watch This Space</div>
+</div><!--END HEADER-->
+
+
+</div>
+<script type="text/javascript">
+//$.fn.cycle.defaults.timeout = 6000;
+$(document).ready(function(){
+    $('#headerheadlines').cycle({
+	    fx:     'scrollDown',
+	    delay:  3000,
+	    speed: 	'slow'
+	});
+	
+	/*
+	$('#feedBody').twitterfeed('thepopgalaxy').ajaxStop(function() {
+		$('#feedBody div.twitterBody').vTicker({ showItems: 5, mousePause:true, direction:'down', speed:700, pause:7000, animation:'fade', height:0});
+	});
+	*/
+	
+	$('.tweet').vTicker({
+		speed: 1500,
+		pause: 6000,
+		showItems: 1,
+		animation: 'fade',
+		mousePause: true,
+		height: 260,
+		direction: 'down'
+	});
+	
+});
+</script>
+
+<div id="BF_WIDGET_1">&nbsp;</div>
+<script type="text/javascript">
+(function( ){
+BF_WIDGET_JS=document.createElement("script"); BF_WIDGET_JS.type="text/javascript";
+BF_WIDGET_SRC="http://ct.buzzfeed.com/wd/UserWidget?u=popgalaxy.com&amp;to=1&amp;or=vb&amp;wid=1&amp;cb=" + (new Date()).getTime();
+setTimeout(function() {document.getElementById("BF_WIDGET_1").appendChild(BF_WIDGET_JS);BF_WIDGET_JS.src=BF_WIDGET_SRC},1);
+})();
+</script>
+
+</body>
+</html>

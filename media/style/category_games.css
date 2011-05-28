@@ -1,0 +1,51 @@
+#headerlogo a {
+	width: 286px;
+	height: 138px;
+	background: url(/media/images/sprites/pg_sprites_01-games.png) no-repeat top left;
+	background-position: 0px 0px;
+	margin-top: 50px;
+	margin-left: -13px;
+    text-align: left;
+    padding-left: 0px;
+	position: absolute;
+	/* z-index: 200; */
+}
+ul#nav li a#shows {
+	width: 112px;
+	height: 30px;
+	background: url(/media/images/sprites/pg_sprites_01-games.png) no-repeat top left;
+	background-position: -355px 0px;
+}
+
+#content,
+#headernav,
+#headerheadlines{
+	background: #193857;
+}
+
+
+.boxHeader{
+	background: #f68512;
+}
+
+.boxBody, 
+.box{
+	background: #ebec12;
+}
+
+#feedHeader, .boxHeader {
+	/*
+	background: #94D0A5 url(/media/images/iconPGgreen.png) 5px 5px no-repeat;
+	background: #529f73 url(/media/images/iconPGgreen.png) 5px 5px no-repeat;
+	*/
+	/*width: 5px;*/
+	height: 15px;
+	/*background: #94D0A5 url(/media/images/sprites/pg_sprites_01-games.png) 5px 5px no-repeat ;*/
+	background-position: -356px -29px;
+	color: #fff;
+	text-transform: uppercase;
+	overflow: hidden;
+	padding: 10px 10px 10px 55px;
+	font-weight: bold;
+	font-size: 18px;
+}

@@ -1,0 +1,141 @@
+{% extends "base_subpage.html" %}
+{% load threadedcommentstags %}
+{% load gravatar %}
+
+{% block pagetitle %}
+	Pop Galaxy : {{ object.title }}
+{% endblock %}
+
+{% block adblock %}
+	{% include "inc/adbox_blog_top.html" %}
+{% endblock %}
+
+{% block content %}
+<!--BEGIN MAIN COLUMN CONTENT-->
+<div id="maincol">
+
+<div id="blogEntry"><!-- START BLOG ENTRY -->
+	<div class="resultsTitle">Blog</div>
+	
+	<div class="entryTitle">
+		{{ object.title }}
+	</div>
+	<div class="entryDetails">
+		<span class="entryDate">{{ object.pub_date|date:"m/d/Y" }}</span> 
+		{% if object.author %}<p><span class="byLine">by <a href="http://www.twitter.com/{{ object.author.twitter }}" target="_blank">{{ object.author }}</a></span><p>{% endif %}
+		{{ object.body_html|safe }}
+	</div>
+
+</div>
+
+{% get_comment_count for object as comment_count %}
+<div class="comment-block">
+    {% if user.is_authenticated %}
+    <a href="javascript:$('comment-form').show(); $('.post-comment').hide();" onclick="$('#comment-form').show(); $('.post-comment').hide(); return false;" class="post-comment">+ POST</a>
+    <div id="comment-form" style="display: none;">
+
+<form method="POST" action="{% get_comment_url object %}"> 
+    <textarea id="comment" name="comment" class="comment-input" style="width: 90%; margin-bottom: 5px;"></textarea>
+
+    {% csrf_token %}
+    <input type="hidden" name="markup" value="5" />
+    <br />
+    <input type="submit" value="Post Comment" />
+</form>
+    </div>
+    {% else %}
+    <div>
+        <div id="comment-form">
+            {% include 'account/login.html' %}
+        </div>
+        <div id="comment-form2" style="display: none;">
+<form method="POST" action="{% get_comment_url object %}"> 
+    <textarea id="comment" name="comment" class="comment-input" style="width: 90%; margin-bottom: 5px;"></textarea>
+
+    {% csrf_token %}
+    <input type="hidden" name="markup" value="5" />
+    <br />
+    <input type="submit" value="Post Comment" />
+</form>
+        </div>
+    </div>
+    {% endif %}
+    <span style="display: inline-block;color: #fff; margin-bottom: 15px;">COMMENTS ({{ comment_count }})</span>
+    {% get_threaded_comment_tree for object as tree %}
+{#    {% get_latest_comments 100 as tree %}#}
+    {% for comment in tree %}
+        <div class="comment" style="margin-bottom: 10px;">
+            <img src="{{ comment.user|gravatar }}" style="background: #f3f7a6; vertical-align: top;"/>
+            <span style="display: inline-block; vertical-align: top; margin-left: 10px;">
+                <span class="comment-name">{{ comment.user.get_full_name }}</span>
+                <span class="comment-when">{{ comment.date_submitted|timesince }} ago</span>
+                <p class="comment-body">
+                {{ comment.comment }}
+                </p>
+{#                <a href="" class="post-reply">REPLY</a>#}
+{% comment %}
+            {% if user.is_authenticated %}
+            <a id="c{{ comment.id }}" href="javascript:show_reply_form('c{{ comment.id }}', '{% get_comment_url object comment %}', '{{ comment.user.username }}')">Reply</a>
+            {% endif %}
+{% endcomment %}
+            </span>
+        </div>
+    {% endfor %}
+            
+{% comment %}
+    <p>Reply to Original:</p>
+    <form method="POST" action="{% get_comment_url object %}">
+            {% get_threaded_comment_form as form %}
+            {% for field in form %}
+                {% if field.label == 'Markup' %}
+                    {{ field }}
+                {% else %}
+                    {{ field }}
+                {% endif %}
+            {% endfor %}
+            
+            {% csrf_token %}
+            <input type="submit" value="Submit Comment" />
+    </form>
+{% endcomment %}
+
+{% comment %}
+<script type="text/javascript">
+function show_reply_form(comment_id, url, person_name) {
+    var comment_reply = $('#' + comment_id);
+    var to_add = $( new Array(
+    '<div class="response"><p>Reply to ' + person_name + ':</p>',
+    '<form method="POST" action="' + url + '">',
+    '<ul>',  '{{ form.as_ul|oneline }}',
+    '<li><input type="submit" value="Submit Comment" /></li>',
+    '</ul>', '</form>', '</div>').join(''));
+    to_add.css("display", "none");
+    comment_reply.after(to_add);
+    to_add.slideDown(function() {
+        comment_reply.replaceWith(new Array('<a id="',
+        comment_id,'" href="javascript:hide_reply_form(\'',
+        comment_id, '\',\'', url, '\',\'', person_name,
+        '\')">Stop Replying</a>').join(''));
+    });
+}
+function hide_reply_form(comment_id, url, person_name) {
+    var comment_reply = $('#' + comment_id);
+    comment_reply.next().slideUp(function (){
+        comment_reply.next('.response').remove();
+        comment_reply.replaceWith(new Array('<a id="',
+        comment_id,'" href="javascript:show_reply_form(\'',
+        comment_id, '\',\'', url, '\',\'', person_name,
+        '\')">Reply</a>').join(''));
+    });
+}
+</script>
+{% endcomment %}
+
+</div>
+
+{% endblock %}
+
+{% block sideadblock %}
+	{% include "inc/adbox_blog_sidebar.html" %}
+{% endblock %}
+

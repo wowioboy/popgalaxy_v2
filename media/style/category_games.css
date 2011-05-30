@@ -17,6 +17,11 @@ ul#nav li a#shows {
 	background-position: -355px 0px;
 }
 
+ul#nav li a:hover {
+	color: #ff9900;
+}
+
+
 #content,
 #headernav,
 #headerheadlines{

@@ -11,7 +11,7 @@ class Headline(models.Model):
     inextra = models.BooleanField('Show in Extra?',default=True)
     title = models.CharField('Headline', max_length=255)
     class Meta:
-        ordering = ('title',)
+        #ordering = ('title',)
         verbose_name_plural = 'headlines'
 
     def __unicode__(self):

@@ -1,0 +1,13 @@
+<div class="boxTop"></div>
+<div class="box" style="height: 125px;">
+<div class="boxHeader">FOLLOW</div>
+<div class="boxBody">
+
+	<ul id="follownav">
+		{% if selected_show.facebook_url %}<li><a href="{{ selected_show.facebook_url }}" target="_blank" id="facebook"></a></li>{% endif %}
+		{% if selected_show.twitter_url %}<li><a href="{{ selected_show.twitter_url }}" target="_blank" id="twitter"></a></li>{% endif %}
+		{% if selected_show.reddit_url %}<li><a href="{{ selected_show.reddit_url }}" target="_blank" id="reddit"></a></li>{% endif %}
+		{% if selected_show.youtube_url %}<li><a href="{{ selected_show.youtube_url }}" target="_blank" id="youtube"></a></li>{% endif %}
+	</ul>
+</div>
+</div>

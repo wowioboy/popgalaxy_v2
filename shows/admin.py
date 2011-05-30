@@ -11,7 +11,8 @@ class ShowsAdmin(admin.ModelAdmin):
         WYWIWYGField: {'widget': TinyMCE(attrs={'cols': 80, 'rows': 30})}, 
     }
     fieldsets = [
-        (None, {'fields':['isactive',('title','slug'),'thumbnail','body_markdown','tags']}),
+        (None, {'fields':['isactive',('title','slug'),'stylesheet','schedule','tags','thumbnail','body_markdown']}),
+        ('Social Media', {'fields':['twitter_url','facebook_url','reddit_url','youtube_url'],'classes':['collapse']})
     ]
 
 admin.site.register(Show, ShowsAdmin)

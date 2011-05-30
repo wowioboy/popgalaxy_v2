@@ -12,7 +12,13 @@ class Show(models.Model):
     title = models.CharField('Title of Show',max_length=255)
     body_html = models.TextField(blank=True,null=True)
     body_markdown = WYWIWYGField('Brief Description',blank=True,null=True)
+    stylesheet = models.CharField('CSS Stylesheet', max_length=100, help_text='Specify the name of the stylesheet. INCLUDE the extension.',blank=True,null=True)
+    schedule = models.CharField('Update Schedule', max_length=50, help_text='Specify day of the week that this show is updated.',blank=True,null=True)
     thumbnail = ShowThumbnailImageField(verbose_name="Logo Image",upload_to='shows',help_text='Dimensions = 200x113',blank=True,null=True)
+    facebook_url = models.CharField('Facebook URL', max_length=150)
+    twitter_url = models.CharField('Twitter URL', max_length=150)
+    reddit_url = models.CharField('Reddit URL', max_length=150)
+    youtube_url = models.CharField('Youtube URL', max_length=150)
     tags = TagField()
     slug = models.SlugField(
         help_text='Automatically built from the title. -- DO NOT MODIFY',

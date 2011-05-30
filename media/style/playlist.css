@@ -1,0 +1,11 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: #F4F3B7 url(/media/images/pagebg.svg) no-repeat;
+	font-family: Rocky, sans-serif;
+	-o-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+}

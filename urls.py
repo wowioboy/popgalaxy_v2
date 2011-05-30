@@ -48,7 +48,7 @@ urlpatterns += patterns('',
     (r'^remote_logout/$', 'views.remote_logout'),
 #    (r'^search/', include('search.urls')),
     (r'^comments/', include('comments.urls')),
-#    (r'^show/(?P<slug>.*)/$', show_page),
+    (r'^show/',include('shows.urls')),
     (r'^(?P<section>.*)/$', home_page),
 )
 """

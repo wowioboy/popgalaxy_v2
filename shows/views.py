@@ -13,23 +13,24 @@ from django.shortcuts import render_to_response
 from django.conf import settings
 from itertools import chain
 from shows.models import *
+from headlines.models import *
 
 import itertools
 
 ########################################
 def show_page(request, slug='shegeek'):
 
-    data_range = 4
-    #carousel_blog = Entry.objects.filter(status=1,carousel=1)[:data_range].values('carousel_text','carousel_subtext','slug','thumbnail')
     headlines = Headline.objects.filter(isactive=1)
     shows = Show.objects.filter(isactive=1)
 
-    selected_show = Show.objects.get(isactive=1,featured=1,slug=slug)
+    selected_show = Show.objects.get(isactive=1,slug=slug)
     related_videos = selected_show.relatedvideos.all()
     related_blogs = selected_show.relatedblogs.all()
+    featured_videos = selected_show.relatedvideos.filter(featured=True)
 
     related_videos = related_videos.order_by('-pub_date')
     related_blogs = related_blogs.order_by('-pub_date')
+    featured_videos = featured_videos.order_by('-pub_date')
 
     latest_items = itertools.chain(related_blogs, related_videos)
 
@@ -62,6 +63,7 @@ def show_page(request, slug='shegeek'):
       'headlines':headlines,
       'tweets':tweets,
       'related_videos': related_videos,
+      'featured_videos': featured_videos,
       'latest_items': list(latest_items),
       'shows': shows,
       'selected_show': selected_show

@@ -4,8 +4,110 @@ html, body {
 }
 
 body {
-	background: #F4F3B7 url(/media/images/pagebg.svg) no-repeat;
-	font-family: Rocky, sans-serif;
+    background: #003366 url(/media/images/pagebg.svg);
+    font-family: Rocky, sans-serif;
 	-o-background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
+}
+
+#headerlogo a {
+	width: 286px;
+	height: 138px;
+	background: url(/media/images/sprites/pg_sprites_01-games.png) no-repeat top left;
+	background-position: 0px 0px;
+	margin-top: 50px;
+	margin-left: -13px;
+    text-align: left;
+    padding-left: 0px;
+	position: absolute;
+	/* z-index: 200; */
+}
+
+#headerheadlines {
+	width: 728px;
+	height: 31px;
+	background: #003366;
+	color: #F4F1B5;
+	font-family: 'VisitorTT1BRKRegular';
+	font-size: 30px;
+	font-size: 25px;
+	margin-top: 155px;
+	margin-left: 261px;
+/*	margin-left: 322px; */
+	position: absolute;
+	z-index: 100;
+	line-height: .5em;
+	padding-left: 8px;
+	padding-top: 2px;
+	overflow: hidden;
+}
+
+#headernav {
+	padding: 20px 15px;
+	margin: 188px 42px 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 967px;
+	background: #003366;
+	position: absolute;
+}
+
+#content {
+	width: 955px;
+	margin: 0 auto;
+	background: #003366;
+	padding-left: 42px;
+	margin-left: 0px;
+	padding-bottom: 100px;
+}
+
+ul#nav li a#shows {
+	width: 112px;
+	height: 30px;
+	background: url(/media/images/sprites/pg_sprites_01-games.png) no-repeat top left;
+	background-position: -355px 0px;
+}
+
+ul#nav li a:hover {
+	color: #ff9900;
+}
+
+#showbox {
+    position: relative;
+    width: 955px;
+    text-align: left;
+}
+
+.showTopRight {
+	width: 100px;
+	background: url(/media/images/cornerright.png) no-repeat right;
+	height: 15px;
+	margin-right: -15px;
+    float:right;
+}
+.showTopLeft {
+	width: 100px;
+	background: url(/media/images/cornerleft.png) no-repeat right;
+	height: 15px;
+	margin-left: -15px;
+    float:right;
+}
+#showinfo {
+    height:15px;
+
+    background-color: #ff9900;
+    color: #fff;
+    text-transform: uppercase;
+	overflow: hidden;
+	padding: 10px 10px 10px 0px;
+	font-weight: bold;
+	font-size: 14px;
+    text-align: right;
+}
+
+#showlogo {
+    
+    height: 80px;
+    background: #003366 url("/media/images/sprites/pg_sprites_shows_01-make.png") no-repeat;
+    background-position: 0px -140px;
 }

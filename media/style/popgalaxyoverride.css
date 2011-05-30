@@ -27,7 +27,6 @@ html, body {
 
 body {
 	background: url(/media/images/pagebg.svg) no-repeat #F4F3B7;
-	background: #f5f6f7;
 	font-family: Rocky, sans-serif;
 	-o-background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
@@ -155,8 +154,7 @@ ul#nav li a {
 }
 
 ul#nav li a:hover {
-/*	background: #D62A27;*/
-	background: none;
+	color:#F4F1B5;
 }
 
 ul#nav li a#videos {

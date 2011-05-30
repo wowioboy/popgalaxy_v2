@@ -1,21 +1,12 @@
 import tweepy
-from django.db.models import Q
-from django.core.exceptions import ObjectDoesNotExist
-from django.db import connection
-from django.core import serializers
-from django.utils import encoding
-from django.http import HttpResponse, Http404, HttpResponseRedirect
+import itertools
 from django.template import RequestContext
-from django.contrib.auth.models import User
-from django.contrib.auth import logout
-from django.template.loader import get_template
 from django.shortcuts import render_to_response
 from django.conf import settings
-from itertools import chain
 from shows.models import *
 from headlines.models import *
 
-import itertools
+
 
 ########################################
 def show_page(request, slug='shegeek'):

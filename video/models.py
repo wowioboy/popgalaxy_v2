@@ -72,17 +72,12 @@ class Video(models.Model):
         return "/video/%s/" % (self.slug,)
 #        return ("video_detail", None, {'slug':self.slug})
 
-"""
-class RelatedVideos(models.Model):
-    video = models.ForeignKey(Video,related_name='relatedvideos')
-
-    class Meta:
-        verbose_name = 'Related Video'
-        verbose_name_plural = 'Related Videos'
-
-    def __unicode__(self):
-        return u'%s' %(self.video)
-"""
+#class ViewCount(models.Model):
+#    video = models.ForeignKey(Video,related_name='relatedviews')
+#    viewcount = models.IntegerField(max_length=8)
+#
+#    class Meta:
+#        verbose_name = ''
 
 class RelatedBlogs(models.Model):
     video = models.ForeignKey(Video,related_name='relatedblogs')

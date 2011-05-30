@@ -25,6 +25,34 @@
 <div id="videoDetails">
 	{{ video.details|safe }}
 	duration: [{{ video.duration }}]
+
+    {% if related_videos %}
+    <p>
+        <strong>Related Videos</strong><br/>
+        {% for item in related_videos %}
+        <a href="{{ item.get_absolute_url }}">{{ item.title }}</a><br/>
+        {% endfor %}
+    </p>
+    {% endif %}
+
+    {% if related_blogs %}
+    <p>
+        <strong>Related Blogs</strong><br/>
+        {% for blog in related_blogs %}
+        <a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a><br/>
+        {% endfor %}
+    </p>
+    {% endif %}
+
+    {% if related_links %}
+    <p>
+        <strong>Related</strong><br/>
+        {% for link in related_links %}
+        <a href="{{ link.url }}">{{ link.linkname }}</a><br/>
+        {% endfor %}
+    </p>
+    {% endif %}
+
 </div>
 
 

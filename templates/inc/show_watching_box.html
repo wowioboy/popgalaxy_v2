@@ -4,13 +4,21 @@
 <div class="boxBody">
 
 
-<div class="tweet">
+<div class="seemore">
 	<ul>
-
+        {% for video in related_videos %}
+        <li>
+	        <span class="seemoreThumb" ><a href="{{ video.get_absolute_url }}" ><img src="{{ video.thumbnail.thumb_url }}" width="50px" border="0"/></a></span>
+	        <span class="seemoreTitle"><a href="{{ video.get_absolute_url }}" >{{ video.title }}</a></span><br/>
+            <span class="seemoreSubTitle">{{ video.subtitle }}</span><br/>
+	        <span class="seemoreCount">0 views</span>
+        </li>
+        {% endfor %}
 	</ul>
 </div>
 
-
+http://twitter.com/share?_=1306780102613&count=horizontal&counturl=http%3A%2F%2Fwww.washingtonpost.com%2Fnational%2Fobama-nominates-dempsey-to-lead-joint-chiefs-of-staff%2F2011%2F05%2F30%2FAGNoHnEH_story.html&original_referer=http%3A%2F%2Fwww.washingtonpost.com%2Fnational%2Fobama-nominates-dempsey-to-lead-joint-chiefs-of-staff%2F2011%2F05%2F30%2FAGNoHnEH_story.html&text=Obama%20nominates%20Dempsey%20to%20lead%20Joint%20Chiefs%20of%20Staff%20-%20The%20Washington%20Post&url=http%3A%2F%2Fwww.washingtonpost.com%2Fnational%2Fobama-nominates-dempsey-to-lead-joint-chiefs-of-staff%2F2011%2F05%2F30%2FAGNoHnEH_story.html&via=washingtonpost
+http://twitter.com/share?_=1306780288541&count=horizontal&counturl=http%3A%2F%2Fwww.washingtonpost.com%2Fnational%2Fosama-bin-laden-killed-in-us-raid-buried-at-sea%2F2011%2F05%2F02%2FAFx0yAZF_story.html&original_referer=http%3A%2F%2Fwww.washingtonpost.com%2Fnational%2Fosama-bin-laden-killed-in-us-raid-buried-at-sea%2F2011%2F05%2F02%2FAFx0yAZF_story.html%3Ffb_ref%3DNetworkNews&text=Osama%20bin%20Laden%20killed%20in%20U.S.%20raid%2C%20buried%20at%20sea%20-%20The%20Washington%20Post&url=http%3A%2F%2Fwww.washingtonpost.com%2Fnational%2Fosama-bin-laden-killed-in-us-raid-buried-at-sea%2F2011%2F05%2F02%2FAFx0yAZF_story.html&via=washingtonpost
 
 </div>
 </div>

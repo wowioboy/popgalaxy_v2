@@ -14,10 +14,18 @@
 
 <title>{% block pagetitle %}{% endblock %}</title>
 
+<link rel="stylesheet" href="{{ MEDIA_URL }}fonts/stylesheet.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="{{ MEDIA_URL }}style/fonts.css" type="text/css" media="screen, projection">
 <link rel="stylesheet" href="{{ MEDIA_URL }}style/style.css" type="text/css" media="screen, projection">
 <link rel="stylesheet" href="{{ MEDIA_URL }}style/popgalaxyoverride.css" type="text/css" media="screen, projection">
+
+{% if show.stylesheet %}
+<link rel="stylesheet" href="{{ MEDIA_URL }}style/{{ show.stylesheet }}" type="text/css" media="screen, projection" />
+{% endif %}
+
 <link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.png">
+
+
 {% include "inc/google_analytics.html" %}
 </head>
 <body>
@@ -38,6 +46,8 @@
 </div>
 
 </div><!--END HEADER-->
+
+
 
 <!--BEGIN PAGE CONTENT-->
 <div id="content">

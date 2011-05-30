@@ -3,7 +3,7 @@ import os.path
 import socket
 PROJECT_DIR = os.path.dirname(__file__)
 
-DEBUG = False
+DEBUG = True
 
 hostname = socket.gethostname()
 

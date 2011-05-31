@@ -48,7 +48,7 @@ if hostname == 'popgalaxy.com':
     DATABASE_PASSWORD = '@llstar$'         # Not used with sqlite3.
     DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
-elif hostname == 'Moonbase-three':
+elif hostname == 'Moonbase-Three.local':
     DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
     DATABASE_ENGINE = 'django.db.backends.sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
     DATABASE_NAME = 'dev.db'       # Or path to database file if using sqlite3.

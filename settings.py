@@ -74,6 +74,8 @@ if hostname == 'Zeus.local':
     MEDIA_ROOT = '/Users/zeus/Desktop/Dropbox/Sites/django/popgalaxy_new/media/'
 elif hostname == 'Lawrence-Leachs-Mac-Pro.local':
     MEDIA_ROOT = '/Users/lawrenceleach/Dropbox/Sites/django/popgalaxy_new/media/'
+elif hostname == 'Moonbase-Three.local':
+    MEDIA_ROOT = '/Users/zach_pennington/Sites/popgalaxy_new/media/'
 else:
     MEDIA_ROOT = '/home/popgalaxy/public_html/popgalaxy/media/'
 

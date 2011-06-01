@@ -49,7 +49,7 @@
 	<div id="newsItems" >
 		{% autopaginate latest_items 5 %}
 		{% for item in latest_items %}
-			<div class="newsItem" style="color: #f3f7a6;">
+			<div class="newsItem" >
 				<div class="newsHeader colorHeaderText">
 				<a href="{{ item.get_absolute_url }}" style="text-decoration: none; color: #f3f7a6;">{{ item.title|safe|truncatewords_html:10|wordwrap:10 }}</a>
 				</div>
@@ -65,7 +65,7 @@
 			<div style="margin-bottom: 10px;">
 				<span style="display: inline-block; vertical-align: top;">
 				<a href="{{ item.get_absolute_url }}">
-				<img src="{{ item.thumbnail.thumb_url }}" height="85px" width="140px" border="0" />
+				<img src="{{ item.thumbnail.thumb_url }}" height="72px" width="115px" border="0" />
 				</a>
 				</span>
 				<span class="newsItemText" >

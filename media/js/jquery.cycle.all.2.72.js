@@ -823,7 +823,7 @@ $.fn.cycle.defaults = {
 	sync:		   1,	  // true if in/out transitions should occur simultaneously
 	random:		   0,	  // true for random, false for sequence (not applicable to shuffle fx)
 	fit:		   0,	  // force slides to fit container
-	containerResize: 1,	  // resize container to fit largest slide
+	containerResize: 0,	  // resize container to fit largest slide
 	pause:		   0,	  // true to enable "pause on hover"
 	pauseOnPagerHover: 0, // true to pause when hovering over pager link
 	autostop:	   0,	  // true to end slideshow after X transitions (where X == slide count)

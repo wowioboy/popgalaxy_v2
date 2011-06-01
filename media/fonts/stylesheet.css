@@ -3,7 +3,7 @@
 
 
 @font-face {
-    font-family: 'VisitorTT1BRKRegular';
+    font-family: 'Visitor';
     src: url('/media/fonts/visitor1-webfont.eot');
     src: url('/media/fonts/visitor1-webfont.eot?#iefix') format('eot'),
          url('/media/fonts/visitor1-webfont.woff') format('woff'),
@@ -13,4 +13,5 @@
     font-style: normal;
 
 }
+
 

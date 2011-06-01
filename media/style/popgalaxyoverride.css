@@ -69,11 +69,15 @@ body {
 
 .pagination .next, .pagination .prev{
     display: inline-block;
+    width: 105px;
     padding: 5px;
     background: #000;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 4px #559B7A;
 }
 
 .pagination .next{
@@ -101,31 +105,6 @@ body {
 	position: absolute;
 	padding: 0 10px;
 	width: 696px;
-}
-
-#headernav {
-	width: 955px;
-	padding: 15px;
-	margin: 188px 0 0;
-	background: #D62A27;
-	position: absolute;
-}
-
-#search {
-	display: inline;
-	color: #1B2023;
-}
-
-#searchbox {
-	width: 709px;
-	height: 34px;
-	line-height: .3em;
-	border: 2px solid #CCCCCC;
-	font-family: Visitor, sans-serif;
-	color: #888688;
-	font-size: 30px;
-	padding-left: 40px;
-	background: url(/media/images/iconsearch.png) 8px 8px no-repeat #fff;
 }
 
 #content {
@@ -291,6 +270,15 @@ body {
 .boxIcon {
 	background: url(/media/images/sprites/pg_sprites_01-main.png) 5px 5px no-repeat ;
 	background-position: -356px -29px;
+	margin: 6px 0 0 6px;
+	width: 42px;
+	height: 36px;
+	position: absolute;
+}
+
+.footerIcon {
+	background: url(/media/images/sprites/pg_sprites_01-main.png) 5px 5px no-repeat ;
+	background-position: -356px -65px;
 	margin: 6px 0 0 6px;
 	width: 42px;
 	height: 36px;
@@ -656,7 +644,7 @@ body {
 }
 
 #footerHeader {
-	background: #4C4C4F url(/media/images/iconPGblack.png) 5px 5px no-repeat;
+	background: ;
 	color: #fff;
 	text-transform: uppercase;
 	height: 15px;
@@ -677,7 +665,7 @@ body {
 	text-align: right;
 	background: rgba(246,144,43,.25);
 	text-shadow: 0 0 4px #fff;
-	
+	color: #F4F3B7;
 }
 
 #newsItems {
@@ -707,14 +695,14 @@ body {
 	width: 305px;
 	font-size: 14px; 
 	line-height: 1.5em;
-	color: #fff; 
+	color: #F4F3E9; 
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin-left: 8px;
 	overflow: hidden;
 }
 
 .colorHeaderText {
-	
+	color: #F4F3B7;
 }
 
 #featurethumbnails {
@@ -783,6 +771,31 @@ img#shows {
 	background-position: 355px 0px;
 }*/
 
+#headernav {
+	width: 835px;
+	padding: 15px 15px 15px 135px;
+	margin: 188px 0 0;
+	background: #D62A27;
+	position: absolute;
+}
+
+#search {
+	display: inline;
+	color: #1B2023;
+}
+
+#searchbox {
+	width: 709px;
+	height: 34px;
+	line-height: .3em;
+	border: 2px solid #CCCCCC;
+	font-family: Visitor, sans-serif;
+	color: #888688;
+	font-size: 30px;
+	padding-left: 40px;
+	background: url(/media/images/iconsearch.png) 8px 8px no-repeat #fff;
+}
+
 ul#nav {
 	display: inline;
 	list-style: none;
@@ -822,10 +835,54 @@ ul#nav li a#shows {
 	left: 10px;
 }
 
-ul#nav li a#videos {
-	width: 92px;
+/* BEGIN FOLLOW BOX */
+ul#follownav {
+	display: inline;
+	list-style: none;
+}
+ul#follownav li {
+	width: 55px;
+	height: 55px;
+	background: url(/media/images/sprites/pg_sprites_01-main.png) no-repeat;
+	background-position: -285px 0;
+	padding-top:15px;
+	padding-left:15px;
+	display: block;
+	text-align:left;
+	float:left;
+	margin-left:9px;
+}
+ul#follownav li a#facebook {
+	width: 48px;
+	height: 48px;
+	background: url(/media/images/sprites/pg_sprites_01-main.png) no-repeat;
+	background-position: -497px -90px;
+	display:block;
+	clear:right;
+}
+ul#follownav li a#twitter {
+	width: 48px;
+	height: 48px;
+	background: url(/media/images/sprites/pg_sprites_01-main.png) no-repeat;
+	background-position: -399px -90px;
+	display:block;
+}
+ul#follownav li a#reddit {
+	width: 48px;
+	height: 48px;
+	background: url(/media/images/sprites/pg_sprites_01-main.png) no-repeat;
+	background-position: -546px -90px;
+	display:block;
+}
+ul#follownav li a#youtube {
+	width: 48px;
+	height: 48px;
+	background: url(/media/images/sprites/pg_sprites_01-main.png) no-repeat;
+	background-position: -448px -90px;
+	display:block;
+}
+ul#follownav li.first {
+	margin-left:0;
 }
 
-ul#nav li a#blog {
-	width: 79px;
-}
+/* END FOLLOW BOX */

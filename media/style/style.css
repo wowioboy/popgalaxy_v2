@@ -122,54 +122,7 @@ br.clearer-left{
 }
 
 
-/* BEGIN FOLLOW BOX */
-ul#follownav {
-	display: inline;
-	list-style: none;
-}
-ul#follownav li {
-	width: 54px;
-	height: 55px;
-	background: url(/media/images/sprites/pg_sprites_01-main.png) no-repeat;
-	background-position: -287px 0;
-	padding-top:15px;
-	padding-left:15px;
-	display: block;
-	text-align:left;
-	float:left;
-	margin-left:8px;
-}
-ul#follownav li a#facebook {
-	width: 48px;
-	height: 48px;
-	background: url(/media/images/sprites/pg_sprites_01-main.png) no-repeat;
-	background-position: -498px -89px;
-	display:block;
-	clear:right;
-}
-ul#follownav li a#twitter {
-	width: 48px;
-	height: 48px;
-	background: url(/media/images/sprites/pg_sprites_01-main.png) no-repeat;
-	background-position: -400px -89px;
-	display:block;
-}
-ul#follownav li a#reddit {
-	width: 48px;
-	height: 48px;
-	background: url(/media/images/sprites/pg_sprites_01-main.png) no-repeat;
-	background-position: -545px -89px;
-	display:block;
-}
-ul#follownav li a#youtube {
-	width: 48px;
-	height: 48px;
-	background: url(/media/images/sprites/pg_sprites_01-main.png) no-repeat;
-	background-position: -447px -89px;
-	display:block;
-}
 
-/* END FOLLOW BOX */
 
 
 
@@ -372,24 +325,6 @@ ul#follownav li a#youtube {
 	background: url(/media/images/connect.svg);
 	-o-background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
-}
-
-#footer {
-	width: 955px;
-	margin: 0 auto 30px auto;
-	min-height: 310px;
-	background: url(/media/images/footerbg.png) no-repeat #1B2023 bottom right;
-}
-
-#footerHeader {
-	background: #4C4C4F url(/media/images/iconPGblack.svg) 5px 5px no-repeat;
-	color: #fff;
-	text-transform: uppercase;
-	height: 15px;
-	overflow: hidden;
-	padding: 10px 10px 10px 55px;
-	font-weight: bold;
-	font-size: 18px;
 }
 
 .comment-block{

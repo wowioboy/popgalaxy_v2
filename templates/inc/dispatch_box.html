@@ -1,6 +1,7 @@
-<div class="boxTop" style="margin-top: 20px;"></div>
+<div class="boxTop"><div class="boxTopCornerRight"></div></div>
 <div class="box">
-<div class="boxHeader">DISPATCH</div>
+<div class="boxIcon"></div>
+<div class="boxHeader colorHeader">DISPATCH</div>
 <div class="boxBody">
 
  
@@ -17,31 +18,35 @@
 -->
 
 {% for tweet in tweets.pop_timeline %}
-<li>
-	<span class="tweetProfileIcon" ><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new"><img src="{{ tweet.user.profile_image_url|safe }}" /></a></span>
+<li class="tweetLi"><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new">
+	<span class="tweetProfileIcon" ><img src="{{ tweet.user.profile_image_url|safe }}" /></span>
+	<div class="tweetRight"><span class="tweetScreenName">{{ tweet.user.screen_name }}:</span>
 	<span class="tweetText">{{ tweet.text }}</span>
-	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span>
+	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span></div></a>
 </li>
 {% endfor %}
 {% for tweet in tweets.dd_timeline %}
-<li>
-	<span class="tweetProfileIcon" ><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new"><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></a></span>
+<li class="tweetLi"><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new">
+	<span class="tweetProfileIcon" ><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></span>
+	<div class="tweetRight"><span class="tweetScreenName">{{ tweet.user.screen_name }}:</span>
 	<span class="tweetText">{{ tweet.text }}</span>
-	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span>
+	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span></div></a>
 </li>
 {% endfor %}
 {% for tweet in tweets.wowio_timeline %}
-<li>
-	<span class="tweetProfileIcon" ><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new"><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></a></span>
+<li class="tweetLi"><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new">
+	<span class="tweetProfileIcon" ><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></span>
+	<div class="tweetRight"><span class="tweetScreenName">{{ tweet.user.screen_name }}:</span>
 	<span class="tweetText">{{ tweet.text }}</span>
-	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span>
+	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span></div></a>
 </li>
 {% endfor %}
 {% for tweet in tweets.wv_timeline %}
-<li>
-	<span class="tweetProfileIcon" ><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new"><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></a></span>
+<li class="tweetLi"><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new">
+	<span class="tweetProfileIcon" ><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></span>
+	<div class="tweetRight"><span class="tweetScreenName">{{ tweet.user.screen_name }}:</span>
 	<span class="tweetText">{{ tweet.text }}</span>
-	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span>
+	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span></div></a>
 </li>
 {% endfor %}
 	</ul>

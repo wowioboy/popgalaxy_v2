@@ -1,17 +1,19 @@
-<div class="boxTop" style="margin-top: 20px;"></div>
+<div class="boxTop"><div class="boxTopCornerRight"></div></div>
 <div class="box">
-<div class="boxHeader">MORE {{ selected_show.title }}</div>
+<div class="boxIcon"></div>
+<div class="boxHeader colorHeader">MORE {{ selected_show.title }}</div>
 <div class="boxBody">
 
 
 <div class="seemore">
 	<ul>
         {% for video in related_videos %}
-        <li>
-	        <span class="seemoreThumb" ><a href="{{ video.get_absolute_url }}" ><img src="{{ video.thumbnail.thumb_url }}" width="50px" border="0"/></a></span>
-	        <span class="seemoreTitle"><a href="{{ video.get_absolute_url }}" >{{ video.title }}</a></span><br/>
+        <li><a href="{{ video.get_absolute_url }}" >
+	        <span class="seemoreThumb" ><img src="{{ video.thumbnail.thumb_url }}" border="0"/></span>
+	        <span class="seemoreTitle">{{ video.title }}</span><br/>
             <span class="seemoreSubTitle">{{ video.subtitle }}</span><br/>
 	        <span class="seemoreCount">0 views</span>
+	        </a>
         </li>
         {% endfor %}
 	</ul>

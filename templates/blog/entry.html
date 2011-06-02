@@ -13,23 +13,24 @@
 {% block content %}
 <!--BEGIN MAIN COLUMN CONTENT-->
 <div id="maincol">
-
-<div id="blogEntry"><!-- START BLOG ENTRY -->
-	<div class="resultsTitle">Blog</div>
+<div class="boxTopCornerLeft"></div>
+<div id="pagecontent">
+<!-- START BLOG ENTRY -->
+	<div id="blogTopBar" class="colorHeader">{{ object.pub_date|date:"m/d/Y" }}</div>
+	<div id="entryDetails">
+		<div id="titleArea">	
+		<h1>{{ object.title }}</h1>
 	
-	<div class="entryTitle">
-		{{ object.title }}
-	</div>
-	<div class="entryDetails">
-		<span class="entryDate">{{ object.pub_date|date:"m/d/Y" }}</span> 
-		{% if object.author %}<p><span class="byLine">by <a href="http://www.twitter.com/{{ object.author.twitter }}" target="_blank">{{ object.author }}</a></span><p>{% endif %}
+		{% if object.author %}<h4>by <a href="http://www.twitter.com/{{ object.author.twitter }}" target="_blank">{{ object.author }}</a></h4>
+		{% endif %}
+		</div>
 		{{ object.body_html|safe }}
 	</div>
 
-</div>
+
 
 {% get_comment_count for object as comment_count %}
-<div class="comment-block">
+<div class="comment-block colorHeader">
     {% if user.is_authenticated %}
     <a href="javascript:$('comment-form').show(); $('.post-comment').hide();" onclick="$('#comment-form').show(); $('.post-comment').hide(); return false;" class="post-comment">+ POST</a>
     <div id="comment-form" style="display: none;">
@@ -131,7 +132,7 @@ function hide_reply_form(comment_id, url, person_name) {
 </script>
 {% endcomment %}
 
-</div>
+</div></div>
 
 {% endblock %}
 

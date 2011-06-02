@@ -27,64 +27,45 @@
 	</div>
 	{% endfor %}
 </div>
-<div id="videoNowPlaying">
-<div id="videoNowPlayingLabel">Now Playing</div>
-<div id="videoNowPlayingTitle">
-	<span class="titleMain"></span><br />
-	<span class="titleSub"></span>
-</div>
-<div id="videoNowPlayingClear"></div>
-</div>
+
 
 
 <div id="videoCarouselTop"></div>
 <div id="videoCarousel">
 
-<div class="videothumbnail">
 	<ul id="featuredNav">
 		{% for item in featured_videos %}
 		<li><a href="#"><img src="{{ item.thumbnail.thumb_url }}"/></a></li>
 		{% endfor %}
 	</ul>
-</div>
 
 </div>
 
 <div>
-	<span id="adLeft" style="display: inline-block; height: 600px; width: 160px; margin-left: 20px; vertical-align: top;">
-		
-	</span>
-	<span style="display: inline-block; vertical-align: top; margin-left: 15px; width: 445px;">
+	<div id="adLeft" style="display: inline-block; height: 600px; width: 160px; margin-left: 15px; vertical-align: top;"></div>
+	<div id="newsItems" >
 		{% autopaginate latest_items 5 %}
 		{% for item in latest_items %}
-			<div style="color: #f3f7a6;">
-				<span style="display: inline-block; width: 250px;">
+			<div class="newsItem" >
+				<div class="newsHeader colorHeaderText">
 				<a href="{{ item.get_absolute_url }}" style="text-decoration: none; color: #f3f7a6;">{{ item.title|safe|truncatewords_html:10|wordwrap:10 }}</a>
-				</span>
-				<span class="category" style="display: inline-block; float: right; font-family: 'VisitorTT1BRKRegular'; ">
+				</div>
+				<div class="category">
 				{% if category %}
 				{{ category }}
 				{% else %}
 				{{ item|get_tag }}
 				{% endif %}
-				</span>
+				</div>
 				<span style="display: inline-block"></span>
 			</div>
 			<div style="margin-bottom: 10px;">
 				<span style="display: inline-block; vertical-align: top;">
 				<a href="{{ item.get_absolute_url }}">
-				<img src="{{ item.thumbnail.thumb_url }}" height="85px" width="140px" border="0" />
+				<img src="{{ item.thumbnail.thumb_url }}" height="72px" width="115px" border="0" />
 				</a>
 				</span>
-				<span class="home_description" style="display: inline-block; 
-					vertical-align: top; 
-					width: 250px; 
-					font-size: 12px; 
-					color: #fff; 
-					font-family: helvetica;
-					margin-left: 10px;
-					overflow: hidden;
-					">
+				<span class="newsItemText" >
 				{% if item.details %}
 				{{ item.details|safe|truncatewords_html:25 }}
 				{% else %}
@@ -94,7 +75,7 @@
 			</div>
 		{% endfor %}
 	{% paginate %}
-	</span>
+	</div>
 </div>
 
 {% endblock %}

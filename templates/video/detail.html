@@ -11,8 +11,8 @@
 {% block content %}
 <!--BEGIN MAIN COLUMN CONTENT-->
 <div id="maincol">
-<div id="videoPlayer">{{ video.url_home|safe }}</div>
-
+<div class="boxTopCornerLeft"></div>
+<div id="pagecontent">
 <div id="videoNowPlaying">
 <div id="videoNowPlayingLabel">Now Playing</div>
 <div id="videoNowPlayingTitle">
@@ -22,7 +22,13 @@
 <div id="videoNowPlayingClear"></div>
 </div>
 
+<div id="videoPlayer">{{ video.url_home|safe }}</div>
 <div id="videoDetails">
+
+	<div id="titleArea"><h3>{{ video.pub_date|date:"m/d/Y" }}</h3>
+	<h1>{{ video.title|striptags }}</h1>
+	<h2>{{ video.subtitle|striptags }}</h2></div>
+
 	{{ video.details|safe }}
 	duration: [{{ video.duration }}]
 
@@ -58,7 +64,7 @@
 
 
 {% get_comment_count for video as comment_count %}
-<div class="comment-block">
+<div class="comment-block colorHeader">
     {% if user.is_authenticated %}
     <a href="javascript:$('comment-form').show(); $('.post-comment').hide();" onclick="$('#comment-form').show(); $('.post-comment').hide(); return false;" class="post-comment">+ POST</a>
     <div id="comment-form" style="display: none;">
@@ -157,6 +163,8 @@ function hide_reply_form(comment_id, url, person_name) {
 }
 </script>
 {% endcomment %}
+</div>
+
 </div>
 
 {% endblock %}

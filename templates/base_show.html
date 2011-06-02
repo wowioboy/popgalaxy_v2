@@ -14,8 +14,8 @@
 
 <title>{% block pagetitle %}{% endblock %}</title>
 
+<link href='http://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ MEDIA_URL }}fonts/stylesheet.css" type="text/css" media="screen, projection" />
-<link rel="stylesheet" href="{{ MEDIA_URL }}style/fonts.css" type="text/css" media="screen, projection">
 <link rel="stylesheet" href="{{ MEDIA_URL }}style/style.css" type="text/css" media="screen, projection">
 <link rel="stylesheet" href="{{ MEDIA_URL }}style/popgalaxyoverride.css" type="text/css" media="screen, projection">
 <link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.png" type="image/x-icon">
@@ -47,9 +47,15 @@
 </div><!--END HEADER-->
 
 
+
+
+
+<!--BEGIN PAGE CONTENT-->
+
+<div id="content">
+
 <!--BEGIN SHOW INFO BAR-->
-<div class="showTopLeft"></div>
-<div class="showTopRight"></div>
+<div class="boxTopCornerLeft"></div>
 <div id="showbox">
 
     <div id="showinfo">
@@ -60,8 +66,6 @@
 <!--END SHOW INFO BAR-->
 
 
-<!--BEGIN PAGE CONTENT-->
-<div id="content">
 	{% block content %}{% endblock %}
 </div><!--END MAIN COLUMN CONTENT-->
 

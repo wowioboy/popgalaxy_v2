@@ -31,47 +31,47 @@ def home_page(request, section=None):
   shows = Show.objects.filter(isactive=1)
 
   if section == 'comics':
-    featured_videos = Video.objects.filter(isactive=1,featured=1,incomics=1)
+    featured_videos = Video.objects.filter(isactive=1,featured=1,incomics=1)[:6]
     carousel_video = Video.objects.filter(isactive=1,carousel=1,incomics=1)
     latest_videos = Video.objects.filter(tags__icontains='comics')
     latest_blogs = Entry.objects.filter(status=1,tags__icontains='comics')
   elif section == 'music':
-    featured_videos = Video.objects.filter(isactive=1,featured=1,inmusic=1)
+    featured_videos = Video.objects.filter(isactive=1,featured=1,inmusic=1)[:6]
     carousel_video = Video.objects.filter(isactive=1,carousel=1,inmusic=1)
     latest_videos = Video.objects.filter(tags__icontains='music')
     latest_blogs = Entry.objects.filter(status=1,tags__icontains='music')
   elif section == 'games':
-    featured_videos = Video.objects.filter(isactive=1,featured=1,ingames=1)
+    featured_videos = Video.objects.filter(isactive=1,featured=1,ingames=1)[:6]
     carousel_video = Video.objects.filter(isactive=1,carousel=1,ingames=1)
     latest_videos = Video.objects.filter(tags__icontains='games')
     latest_blogs = Entry.objects.filter(status=1,tags__icontains='games')
   elif section == 'film':
-    featured_videos = Video.objects.filter(isactive=1,featured=1,infilm=1)
+    featured_videos = Video.objects.filter(isactive=1,featured=1,infilm=1)[:6]
     carousel_video = Video.objects.filter(isactive=1,carousel=1,infilm=1)
     latest_videos = Video.objects.filter(tags__icontains='film')
     latest_blogs = Entry.objects.filter(status=1,tags__icontains='games')
   elif section == 'tv':
-    featured_videos = Video.objects.filter(isactive=1,featured=1,intv=1)
+    featured_videos = Video.objects.filter(isactive=1,featured=1,intv=1)[:6]
     carousel_video = Video.objects.filter(isactive=1,carousel=1,intv=1)
     latest_videos = Video.objects.filter(tags__icontains='tv')
     latest_blogs = Entry.objects.filter(status=1,tags__icontains='tv')
   elif section == 'interactive':
-    featured_videos = Video.objects.filter(isactive=1,featured=1,inint=1)
+    featured_videos = Video.objects.filter(isactive=1,featured=1,inint=1)[:6]
     carousel_video = Video.objects.filter(isactive=1,carousel=1,inint=1)
     latest_videos = Video.objects.filter(tags__icontains='interactive')
     latest_blogs = Entry.objects.filter(status=1,tags__icontains='interactive')
   elif section == 'extra':
-    featured_videos = Video.objects.filter(isactive=1,featured=1,inextra=1)
+    featured_videos = Video.objects.filter(isactive=1,featured=1,inextra=1)[:6]
     carousel_video = Video.objects.filter(isactive=1,carousel=1,inextra=1)
     latest_videos = Video.objects.filter(tags__icontains='extra')
     latest_blogs = Entry.objects.filter(status=1,tags__icontains='extra')
   else:
-    featured_videos = Video.objects.filter(isactive=1,featured=1)
+    featured_videos = Video.objects.filter(isactive=1,featured=1)[:6]
     carousel_video = Video.objects.filter(isactive=1,carousel=1)
     latest_videos = Video.objects.filter(isactive=1)
     latest_blogs = Entry.objects.filter(status=1)
 
-  latest_videos = latest_videos.order_by('-pub_date')
+  latest_videos = latest_videos.order_by('-pub_date')[:4]
   latest_blogs = latest_blogs.order_by('-pub_date')
 
   latest_items = itertools.chain(latest_blogs, latest_videos)

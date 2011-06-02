@@ -4,61 +4,22 @@
 <div class="boxHeader colorHeader">WATCHING</div>
 <div class="boxBody">
 
- 
-<div class="tweet">
+
+<div class="seemore">
 	<ul>
-<!--
-{% for tweet in tweets.mentions %}
-<li>
-	<span class="tweetProfileIcon" ><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></span>
-	<span class="twwetText">{{ tweet.text }}</span>
-	<span class="tweetDate">{{ tweet.created_at|date:"m/d/Y h:j:s" }}</span>
-</li>
-{% endfor %}
--->
-
-{% comment %}
-
-{% for tweet in tweets.pop_timeline %}
-<li>
-	<span class="tweetProfileIcon" ><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new"><img src="{{ tweet.user.profile_image_url|safe }}" /></a></span>
-	<span class="tweetText">{{ tweet.text }}</span>
-	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span>
-</li>
-{% endfor %}
-{% for tweet in tweets.dd_timeline %}
-<li>
-	<span class="tweetProfileIcon" ><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new"><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></a></span>
-	<span class="tweetText">{{ tweet.text }}</span>
-	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span>
-</li>
-{% endfor %}
-{% for tweet in tweets.wowio_timeline %}
-<li>
-	<span class="tweetProfileIcon" ><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new"><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></a></span>
-	<span class="tweetText">{{ tweet.text }}</span>
-	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span>
-</li>
-{% endfor %}
-{% for tweet in tweets.wv_timeline %}
-<li>
-	<span class="tweetProfileIcon" ><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new"><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></a></span>
-	<span class="tweetText">{{ tweet.text }}</span>
-	<span class="tweetDate">{{ tweet.created_at|timesince }} ago</span>
-</li>
-{% endfor %}
-
-{% endcomment %}
-
-
+        {% for video in latest_videos %}
+        <li><a href="{{ video.get_absolute_url }}" >
+	        <span class="seemoreThumb" ><img src="{{ video.thumbnail.thumb_url }}" border="0"/></span>
+	        <span class="seemoreTitle">{{ video.title }}</span><br/>
+            <span class="seemoreSubTitle">{{ video.subtitle }}</span><br/>
+	        <span class="seemoreCount">0 views</span>
+	        </a>
+        </li>
+        {% endfor %}
 	</ul>
 </div>
 
-<!-- 
-{% for tweet in tweets %}
-<div class="tweet"><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new">@{{ tweet.user.screen_name }}</a><br/>{{ tweet.text }}<br/>{{ tweet.created_at }}<br/><br/></div>
-{% endfor %}
--->
+
 
 </div>
 </div>

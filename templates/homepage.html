@@ -17,7 +17,7 @@
 <div id="featurethumbnails">
 	{% for video in featured_videos %}
 	<div {% ifnotequal forloop.counter 1 %}style="display:none;"{% endifnotequal %}>
-		<a href="{{ video.get_absolute_url }}"><img src="{{ MEDIA_URL }}{{ video.featuredthumb }}"/></a>
+		<a href="{{ video.get_absolute_url }}"><img src="{{ MEDIA_URL }}{{ video.featuredthumb }}" {% if forloop.last %}class="last"{% endif %}/></a>
 	</div>
 	{% endfor %}
 </div>

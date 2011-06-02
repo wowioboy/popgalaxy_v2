@@ -156,51 +156,10 @@ br.clearer-left{
 	float: left;
 }
 
-#videoPlayer {
-	margin-left: -15px;
-	width: 640px;
-	height: 360px;
-	background: #D62A27 url(/media/images/playerbg.png) no-repeat center;
-}
-
 #featurethumbnails {
 	margin-left: 20px;
 	width: 640px;
 	height: 360px;
-}
-
-
-
-#videoNowPlaying {
-	width: 610;
-	height: 45px;
-	overflow: hidden;
-	background: #94D0A5;
-	margin-left: 15px;
-	margin-top: 45px;
-	color: #fff;
-	font-weight: 18px;
-}
-
-#videoNowPlayingLabel {
-	padding: 10px;
-	float: left;
-	background: #94D0A5;
-	width: 90px;
-	font-size: 18px;
-	line-height: .9em;
-	text-align: right;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-#videoNowPlayingTitle {
-	width: 480px;
-	padding: 10px;
-	font-size: 18px;
-	line-height: .9em;
-	float: left;
-	background: #559B7A;
 }
 
 .titleMain {
@@ -327,83 +286,4 @@ br.clearer-left{
 	-webkit-background-size: 100% 100%;
 }
 
-.comment-block{
-    margin-left: 15px;
-    padding: 15px;
-    background: #91d798;
-    margin-bottom: 15px;
-}
-
-
-.comment-body{
-/*    background: #f3f7a6;*/
-    padding: 5px;
-    padding-top: 0;
-    margin-top: 0;
-    font-family: helvetica;
-    font-size: .8em;
-    width: 400px;
-}
-
-.comment-name{
-    color: #529f73;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.comment-when{
-    color: #847f81;
-}
-
-.post-comment, .post-reply{
-    display: inline-block;
-    color: #fff;
-    background: #d82324;
-    padding: 7px;
-    padding-bottom: 0;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.post-comment{
-    margin-top: -15px;
-    margin-right: -15px;
-    float: right;
-}
-
-.post-reply{
-    font-size: .8em;
-}
-
-.comment-input{
-    display: inline-block;
-    padding: 5px;
-    border: solid #c0c0c0 2px;
-    vertical-align: middle;
-}
-
-#comment-form, #comment-form2{
-    padding: 15px;
-    margin-bottom: 20px;
-    background: #f3f7a6;
-}
-
-.cred-form label{
-    vertical-align: middle;
-    display: inline-block;
-    width: 100px;
-}
-
-.field-row{
-    display: inline-block;
-    margin: 2px;
-}
-
-#errors{
-    background: red;
-    color: #fff;
-    padding: 5px;
-    display: none;
-    margin-bottom: 10px;
-}
 /* END */

@@ -1,9 +1,32 @@
 body {
-    background: #003366 url(/media/images/pagebg.svg);
-    font-family: Rocky, sans-serif;
+    background: #033B59 url(/media/images/pagebg.svg);
 	-o-background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
 }
+
+.colorHeader {
+	background: #f68512;
+}
+
+.colorBox {
+	background: #F2E920;
+}
+
+.boxIcon {
+	background: url(/media/images/sprites/pg_sprites_01-games.png) 5px 5px no-repeat ;
+	background-position: -356px -29px;
+}
+
+.boxTopCornerRight {
+	background: url(/media/images/sprites/pg_sprites_01-games.png) no-repeat top left;
+	background-position: -427px -30px;
+}
+
+.boxTopCornerLeft {
+	background: url(/media/images/sprites/pg_sprites_01-games.png) no-repeat top left;
+	background-position: -410px -30px;
+}
+
 #headerlogo a {
 	width: 286px;
 	height: 138px;
@@ -31,7 +54,7 @@ ul#nav li a:hover {
 #content,
 #headernav,
 #headerheadlines{
-	background: #193857;
+	background: #033B59;
 }
 
 
@@ -41,7 +64,7 @@ ul#nav li a:hover {
 
 .boxBody, 
 .box{
-	background: #ebec12;
+	background: #F2E920;
 }
 
 #feedHeader, .boxHeader {
@@ -59,4 +82,8 @@ ul#nav li a:hover {
 	padding: 10px 10px 10px 55px;
 	font-weight: bold;
 	font-size: 18px;
+}
+ul#follownav li {
+	background: url(/media/images/sprites/pg_sprites_01-music.png) no-repeat;
+	background-position: -285px 0;
 }

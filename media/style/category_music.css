@@ -1,9 +1,29 @@
 body {
     background: #003366 url(/media/images/pagebg.svg);
-    font-family: Rocky, sans-serif;
 	-o-background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
 }
+
+.colorHeader {
+	background: #5cc7ad;
+}
+
+.boxIcon {
+	background: url(/media/images/sprites/pg_sprites_01-music.png) 5px 5px no-repeat ;
+	background-position: -356px -29px;
+}
+
+.boxTopCornerRight {
+	background: url(/media/images/sprites/pg_sprites_01-music.png) no-repeat top left;
+	background-position: -427px -30px;
+}
+
+.boxTopCornerLeft {
+	background: url(/media/images/sprites/pg_sprites_01-music.png) no-repeat top left;
+	background-position: -410px -30px;
+}
+
+
 #headerlogo a {
 	width: 286px;
 	height: 138px;
@@ -55,4 +75,8 @@ ul#nav li a#shows {
 	padding: 10px 10px 10px 55px;
 	font-weight: bold;
 	font-size: 18px;
+}
+ul#follownav li {
+	background: url(/media/images/sprites/pg_sprites_01-music.png) no-repeat;
+	background-position: -285px 0;
 }

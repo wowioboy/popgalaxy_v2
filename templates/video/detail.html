@@ -13,14 +13,20 @@
 <div id="maincol">
 <div class="boxTopCornerLeft"></div>
 <div id="pagecontent">
-<div id="videoNowPlaying">
-<div id="videoNowPlayingLabel">Now Playing</div>
-<div id="videoNowPlayingTitle">
-	<span class="titleMain">{{ video.title|striptags }}</span><br />
-	<span class="titleSub">{{ video.subtitle|striptags }}</span>
+<div id="blogTopBar" class="colorHeader">{{ video.pub_date|date:"m/d/Y" }}
+
+<div id="shareBar">
+<ul>
+<li><div id="fb"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=165396726857534&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="80" show_faces="false" font="arial"></fb:like></div></li>
+<li><a href="http://" class="shareIcon shareTW"><span>Twitter</span></a></li>
+<li><a href="http://" class="shareIcon shareDG"><span>Digg</span></a></li>
+<li><a href="http://" class="shareIcon shareRD"><span>Reddit</span></a></li>
+<li><a href="http://" class="shareIcon shareSU"><span>StumbleUpon</span></a></li>
+</ul>
 </div>
-<div id="videoNowPlayingClear"></div>
+
 </div>
+
 
 <div id="videoPlayer">{{ video.url_home|safe }}</div>
 <div id="videoDetails">
@@ -65,17 +71,19 @@
 
 {% get_comment_count for video as comment_count %}
 <div class="comment-block colorHeader">
+
+
     {% if user.is_authenticated %}
     <a href="javascript:$('comment-form').show(); $('.post-comment').hide();" onclick="$('#comment-form').show(); $('.post-comment').hide(); return false;" class="post-comment">+ POST</a>
     <div id="comment-form" style="display: none;">
 
 <form method="POST" action="{% get_comment_url video %}"> 
-    <textarea id="comment" name="comment" class="comment-input" style="width: 90%; margin-bottom: 5px;"></textarea>
+    <textarea id="comment" name="comment" class="comment-input"></textarea>
 
     {% csrf_token %}
     <input type="hidden" name="markup" value="5" />
     <br />
-    <input type="submit" value="Post Comment" />
+    <input type="submit" value="Post Comment" class="buttons"/>
 </form>
     </div>
     {% else %}
@@ -90,34 +98,37 @@
     {% csrf_token %}
     <input type="hidden" name="markup" value="5" />
     <br />
-    <input type="submit" value="Post Comment" />
+    <input type="submit" value="Post Comment" class="buttons" />
 </form>
         </div>
     </div>
     {% endif %}
-    <span style="color: #fff;">COMMENTS ({{ comment_count }})</span>
+    <div class="comment-header">COMMENTS <span class="normal color3">({{ comment_count }})</span></div>
     {% get_threaded_comment_tree for video as tree %}
+{#    {% get_latest_comments 100 as tree %}#}
     {% for comment in tree %}
         <div class="comment" style="margin-bottom: 10px;">
-            <img src="{{ comment.user|gravatar }}" style="background: #f3f7a6; vertical-align: top;"/>
-            <span style="display: inline-block; vertical-align: top; margin-left: 10px;">
+            <img src="{{ comment.user|gravatar }}" class="comment-avatar"/>
+            <div class="comment-text">
                 <span class="comment-name">{{ comment.user.get_full_name }}</span>
-                <span class="comment-when">{{ comment.date_submitted|timesince }} ago</span>
+                <span class="comment-when color3">{{ comment.date_submitted|timesince }} ago</span>
                 <p class="comment-body">
                 {{ comment.comment }}
                 </p>
+{#                <a href="" class="post-reply">REPLY</a>#}
 {% comment %}
             {% if user.is_authenticated %}
-            <a id="c{{ comment.id }}" href="javascript:show_reply_form('c{{ comment.id }}', '{% get_comment_url object comment %}', '{{ comment.user.username }}')">Reply</a>
+            <a id="c{{ comment.id }}" href="javascript:show_reply_form('c{{ comment.id }}', '{% get_comment_url video comment %}', '{{ comment.user.username }}')">Reply</a>
             {% endif %}
 {% endcomment %}
-            </span>
+            </div>
+            <div class="clear"></div>
         </div>
     {% endfor %}
             
 {% comment %}
     <p>Reply to Original:</p>
-    <form method="POST" action="{% get_comment_url object %}">
+    <form method="POST" action="{% get_comment_url video %}">
             {% get_threaded_comment_form as form %}
             {% for field in form %}
                 {% if field.label == 'Markup' %}
@@ -163,6 +174,7 @@ function hide_reply_form(comment_id, url, person_name) {
 }
 </script>
 {% endcomment %}
+
 </div>
 
 </div>

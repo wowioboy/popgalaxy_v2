@@ -1,7 +1,7 @@
 
     <div id="errors">
     </div>
-            <span style="display: inline-block; vertical-align: middle; border-right: solid #c0c0c0 1px;" id="signup-login">
+            <div id="signup-login">
 <form class="cred-form" action="/signup/" id="signup-form">
     <span class="field-row">
     <label>Name:</label> <input type="text" class="comment-input" id="name" />
@@ -20,14 +20,14 @@
     </span>
     <br />
     <span class="field-row">
-    <input type="submit" value="Sign Up" />
+    <input type="submit" value="Sign Up"  class="buttons"/>
     </span>
 </form>
-            </span>
-            <span style="display: inline-block; vertical-align: middle;">
+            </div>
+            <div id="signup-signup">
                 OR
                 <a href="javascript:$('#comment-form').load('/login_html/');" onclick="$('#comment-form').load('/login_html/'); return false;">Login</a> to post a comment
-            </span>
+            </div>
 
             <script type="text/javascript">
 

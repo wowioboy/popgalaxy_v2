@@ -1,7 +1,7 @@
 
     <div id="errors">
     </div>
-            <span style="display: inline-block; vertical-align: middle; border-right: solid #c0c0c0 1px;" id="signup-login">
+            <div id="signup-login">
             <form class="cred-form" action="/login/" id="login-form">
                 <span class="field-row">
                 <label>Email:</label><input id="username" type="text" class="comment-input" />
@@ -10,12 +10,12 @@
                 <label>Password:</label><input id="password" type="password" class="comment-input" />
                 </span><br />
                 <span class="field-row">
-                <input type="submit" value="Login" />
+                <input type="submit" value="Login" class="buttons" />
                 </span>
 {#                {% csrf_token %}#}
             </form>
-            </span>
-            <span style="display: inline-block; vertical-align: middle;">
+            </div>
+            <span id="signup-signup">
                 OR
                 <a href="javascript:$('#comment-form').load('/signup_html/');" onclick="$('#comment-form').load('/signup_html/'); return false;">Sign Up</a> to post a comment
             </span>

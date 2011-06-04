@@ -18,18 +18,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 }
 
-html, body {
-	width: 100%;
-	height: 100%;
-}
-
-body {
-	background: url(/media/images/pagebg.svg) no-repeat #F4F3B7;
-	font-family: Rocky, sans-serif;
-	-o-background-size: 100% 100%;
-	-webkit-background-size: 100% 100%;
-}
-
 br.clearer{
     clear:both;
 }
@@ -38,17 +26,6 @@ br.clearer-right{
 }
 br.clearer-left{
     clear:left;
-}
-
-#container {
-	width: 1040px;
-	margin: 0 auto;
-	z-index: 1000;
-}
-
-#header {
-	width: 1040px;
-	height: 257px;
 }
 
 #headerlogo{
@@ -188,102 +165,16 @@ br.clearer-left{
 	text-transform: uppercase;
 }
 
-.videothumbnail {
-	float: left;
-	display: inline;
-	margin-left: 15px;
-	margin-top: 15px;
-}
-
-.videothumbnailimage {
-	height: 34px;
-	width: 110px;
-	padding-left: 4px;
-	padding-right: 4px;
-	padding-top: 40px;
-	vertical-align: baseline;
-	overflow: none;
-	background: #1B2023;
-}
-
-.videothumbnailtitle {
-	font-weight: bold;
-	color: #fff;
-	font-size: 14px;
-}
-
-.videothumbnailtype {
-	margin-top: 4px;
-	font-size: 12px;
-}
-
 #sidecol {
 	width: 300px;
 	float: left;
 	margin-left: 15px;
 }
 
-#adBox {
-	width: 300px;
-	height: 250px;
-	background: #666 url(/media/images/adbg.png);
-}
-
-#feedTop {
-	width: 330px;
-	background: url(/media/images/cornerright.svg) no-repeat right;
-	height: 15px;
-	margin-right: -15px;
-}
-
-#feed {
-	margin-right: -15px;
-	margin-bottom: -15px;
-	background: #559B7A;
-	width: 330px;
-	height: 315px;
-}
-
-#feedHeader {
-	background: #94D0A5 url(/media/images/iconPGgreen.svg) 5px 5px no-repeat;
-	color: #fff;
-	text-transform: uppercase;
-	height: 15px;
-	overflow: hidden;
-	padding: 10px 10px 10px 55px;
-	font-weight: bold;
-	font-size: 18px;
-}
-
-#feedBody {
-	height: 315px;
-	overflow: hidden;
-	position: relative;
-}
-
-#feedBody li {
-	width:305px;
-	font-size: 14px;
-	/*border-bottom: 1px solid #94D0A5;*/
-	color: #515151;
-	padding: 3px 0px 0px 0px;
-	height: 90px;
-	overflow: visible;
-	vertical-align: middle;
-	margin-bottom: 5px;
-}
 
 #contentclear {
 	clear: both;
 }
 
-#connect {
-	width: 955px;
-	height: 60px;
-	margin: 0 auto;
-	background: url(/media/images/connect.svg);
-	-o-background-size: 100% 100%;
-	-webkit-background-size: 100% 100%;
-}
 
 /* END */

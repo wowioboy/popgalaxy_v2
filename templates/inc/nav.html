@@ -11,14 +11,13 @@
 	<li><a href="/interactive/" id="interactive">Interactive</a></li>
 	<li><a href="/extras/" id="extra">Extra</a></li>
 </ul>
-	<a href="" style="
-		display: inline-block;
-		vertical-align: middle;
-		float: right;
-	"
-		onclick="return click_search();">
-	<img src="{{ MEDIA_URL }}images/iconsearch_white.png" />
-	</a>
+
+	<div id="searchBar">
+	<a href="" onclick="return click_search();"><img id="searchButton" src="{{ MEDIA_URL }}images/iconsearch_white.png" /></a>
+	<form method="post" action=""><input type="text" name="" value="Search" /></form>
+	</div>
+
+
 </div>
 <div id="shows_box" >
 	{% for show in shows %}

@@ -14,7 +14,7 @@
 
 	<div id="searchBar">
 	<a href="" onclick="return click_search();"><img id="searchButton" src="{{ MEDIA_URL }}images/iconsearch_white.png" /></a>
-	<form method="post" action=""><input type="text" name="" value="Search" /></form>
+	<form method="post" action=""><input type="text" name="" value="Search" onblur="if (this.value == '') { this.value='Search';}" onfocus="if (this.value == 'Search') { this.value = '';}" /></form>
 	</div>
 
 

@@ -20,6 +20,7 @@ def show_page(request, slug='shegeek'):
     featured_videos = selected_show.relatedvideos.filter(featured=True)
 
     related_videos = related_videos.order_by('-pub_date')
+    sidebar_videos = related_videos.order_by('pub_date')[:4]
     related_blogs = related_blogs.order_by('-pub_date')
     featured_videos = featured_videos.order_by('-pub_date')
 
@@ -54,6 +55,7 @@ def show_page(request, slug='shegeek'):
       'headlines':headlines,
       'tweets':tweets,
       'related_videos': related_videos,
+      'sidebar_videos': sidebar_videos,
       'featured_videos': featured_videos,
       'latest_items': list(latest_items),
       'shows': shows,

@@ -1,7 +1,6 @@
-<div id="search">
-<!--
+<div id="searchBar">
+	<a href="" onclick="return click_search();"><img id="searchButton" src="{{ MEDIA_URL }}images/iconsearch_white.png" /></a>
 	<form id="searchform" method="post" action="/search/">
-	<input id="searchbox" type="text" name="searchbox" value="Search the Pop Galaxy!" onFocus="if (this.value == 'Search the Pop Galaxy!'){this.value='';}" onBlur="if (this.value == ''){this.value='Search the Pop Galaxy!';}" />
-	</form>
--->
+        <input id="searchbox" type="text" name="searchbox" value="Search" onblur="if (this.value == '') { this.value='Search';}" onfocus="if (this.value == 'Search') { this.value = '';}" />
+    </form>
 </div>

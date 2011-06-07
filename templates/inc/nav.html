@@ -12,11 +12,7 @@
 	<li><a href="/extras/" id="extra">Extra</a></li>
 </ul>
 
-	<div id="searchBar">
-	<a href="" onclick="return click_search();"><img id="searchButton" src="{{ MEDIA_URL }}images/iconsearch_white.png" /></a>
-	<form method="post" action=""><input type="text" name="" value="Search" onblur="if (this.value == '') { this.value='Search';}" onfocus="if (this.value == 'Search') { this.value = '';}" /></form>
-	</div>
-
+    {% include "inc/search.html" %}
 
 </div>
 <div id="shows_box" >

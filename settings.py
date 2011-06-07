@@ -48,14 +48,14 @@ if hostname == 'popgalaxy.com':
     DATABASE_PASSWORD = '@llstar$'         # Not used with sqlite3.
     DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
-#elif hostname == 'Moonbase-Three.local':
-#    DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-#    DATABASE_ENGINE = 'django.db.backends.sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-#    DATABASE_NAME = 'dev.db'       # Or path to database file if using sqlite3.
-#    DATABASE_USER = ''             # Not used with sqlite3.
-#    DATABASE_PASSWORD = ''         # Not used with sqlite3.
-#    DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
-#    DEBUG = True
+elif hostname == 'The-Flying-Tomato.local':
+    DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
+    DATABASE_ENGINE = 'django.db.backends.sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+    DATABASE_NAME = 'dev.db'       # Or path to database file if using sqlite3.
+    DATABASE_USER = ''             # Not used with sqlite3.
+    DATABASE_PASSWORD = ''         # Not used with sqlite3.
+    DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+    DEBUG = True
 
 else:
     DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
@@ -76,6 +76,10 @@ elif hostname == 'Lawrence-Leachs-Mac-Pro.local':
     MEDIA_ROOT = '/Users/lawrenceleach/Dropbox/Sites/django/popgalaxy_new/media/'
 elif hostname == 'Moonbase-Three.local':
     MEDIA_ROOT = '/Users/zach_pennington/Sites/popgalaxy_new/media/'
+elif hostname == 'The-Flying-Tomato.local':
+    MEDIA_ROOT = '/Users/asher/Sites/popgalaxy_new/media/'
+elif hostname == 'event-10-1-39-75.venue.apple.com':
+    MEDIA_ROOT = '/Users/zeus/Desktop/Dropbox/Sites/django/popgalaxy_new/media/'
 else:
     MEDIA_ROOT = '/home/popgalaxy/public_html/popgalaxy/media/'
 

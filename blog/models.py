@@ -59,7 +59,7 @@ class Entry(models.Model):
     
     def save(self):
          self.body_html = markdown.markdown(self.body_markdown, safe_mode = False)
-         self.leadin_html = markdown.markdown(self.leadin_markdown, safe_mode = False)
+         #self.leadin_html = markdown.markdown(self.leadin_markdown, safe_mode = False)
          super(Entry, self).save()
 
     def get_previous_published(self):

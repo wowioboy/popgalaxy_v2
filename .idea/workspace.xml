@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c08a134-4d06-4439-b78d-a08c2b5c2958" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/inc/adbox_home_left_sidebar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/inc/adbox_ros_left_sidebar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/adbox_blog_sidebar.html" afterPath="$PROJECT_DIR$/templates/inc/adbox_blog_sidebar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/adbox_blog_top.html" afterPath="$PROJECT_DIR$/templates/inc/adbox_blog_top.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/adbox_home_sidebar.html" afterPath="$PROJECT_DIR$/templates/inc/adbox_home_sidebar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/adbox_home_top.html" afterPath="$PROJECT_DIR$/templates/inc/adbox_home_top.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/adbox_search_sidebar.html" afterPath="$PROJECT_DIR$/templates/inc/adbox_search_sidebar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/adbox_search_top.html" afterPath="$PROJECT_DIR$/templates/inc/adbox_search_top.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/adbox_video_sidebar.html" afterPath="$PROJECT_DIR$/templates/inc/adbox_video_sidebar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/adbox_video_top.html" afterPath="$PROJECT_DIR$/templates/inc/adbox_video_top.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/footer_nav_studiow.html" afterPath="$PROJECT_DIR$/templates/inc/footer_nav_studiow.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/show_watching_box.html" afterPath="$PROJECT_DIR$/templates/inc/show_watching_box.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/inc/watching_box.html" afterPath="$PROJECT_DIR$/templates/inc/watching_box.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/homepage.html" afterPath="$PROJECT_DIR$/templates/homepage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/shows/index.html" afterPath="$PROJECT_DIR$/templates/shows/index.html" />
     </list>
     <ignored path="popgalaxy_new.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,73 +44,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adbox_home_top.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/inc/adbox_home_top.html">
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="19" selection-start="511" selection-end="511" vertical-scroll-proportion="-3.84">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="18.56">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adbox_search_sidebar.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/inc/adbox_search_sidebar.html">
+      <file leaf-file-name="homepage.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="19" selection-start="443" selection-end="443" vertical-scroll-proportion="-3.84">
+            <state line="21" column="16" selection-start="651" selection-end="651" vertical-scroll-proportion="0.35897437">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adbox_search_top.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/inc/adbox_search_top.html">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/shows/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="19" selection-start="473" selection-end="473" vertical-scroll-proportion="-3.84">
+            <state line="45" column="20" selection-start="1089" selection-end="1089" vertical-scroll-proportion="-18.56">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adbox_video_sidebar.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/inc/adbox_video_sidebar.html">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="19" selection-start="443" selection-end="443" vertical-scroll-proportion="-3.84">
+            <state line="55" column="59" selection-start="2165" selection-end="2165" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adbox_video_top.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/inc/adbox_video_top.html">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="19" selection-start="472" selection-end="472" vertical-scroll-proportion="-3.84">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adbox_blog_sidebar.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/inc/adbox_blog_sidebar.html">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/video/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="19" selection-start="443" selection-end="443" vertical-scroll-proportion="-3.84">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adbox_blog_top.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/inc/adbox_blog_top.html">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="-5.12">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="19" selection-start="118" selection-end="118" vertical-scroll-proportion="0.1360255">
+            <state line="102" column="37" selection-start="4771" selection-end="4771" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,12 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/blog/admin.py" />
-        <option value="$PROJECT_DIR$/templates/blog/entry.html" />
-        <option value="$PROJECT_DIR$/templates/video/detail.html" />
-        <option value="$PROJECT_DIR$/blog/models.py" />
-        <option value="$PROJECT_DIR$/templates/inc/footer_nav_studiow.html" />
-        <option value="$PROJECT_DIR$/templates/inc/watching_box.html" />
         <option value="$PROJECT_DIR$/templates/inc/show_watching_box.html" />
         <option value="$PROJECT_DIR$/templates/inc/adbox_home_sidebar.html" />
         <option value="$PROJECT_DIR$/templates/inc/adbox_home_top.html" />
@@ -152,6 +131,12 @@
         <option value="$PROJECT_DIR$/templates/inc/adbox_search_top.html" />
         <option value="$PROJECT_DIR$/templates/inc/adbox_blog_top.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/templates/inc/adbox_home_left_sidebar.html" />
+        <option value="$PROJECT_DIR$/templates/shows/index.html" />
+        <option value="$PROJECT_DIR$/templates/inc/adbox_ros_left_sidebar.html" />
+        <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/blog/views.py" />
+        <option value="$PROJECT_DIR$/templates/homepage.html" />
       </list>
     </option>
   </component>
@@ -181,7 +166,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
@@ -211,6 +195,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="video" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="popgalaxy_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="popgalaxy_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -229,12 +227,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
+              <option name="myItemId" value="video" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="popgalaxy_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="popgalaxy_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shows" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="popgalaxy_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="popgalaxy_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,16 +282,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="272" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1065" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1066" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1066" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1065" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="270" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="267" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Django server.popgalaxy_new">
     <configuration default="true" type="PythonUnitTestConfigurationType" factoryName="Python's unittest">
@@ -410,7 +441,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15018706" sideWeight="0.67171717" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15179048" sideWeight="0.67171717" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32828283" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -469,47 +500,30 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blog/admin.py">
+    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_video_top.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="5" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="23" selection-start="3493" selection-end="3493" vertical-scroll-proportion="0.25078043">
+        <state line="6" column="19" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_blog_sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shows/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="138" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.16649324">
+        <state line="6" column="19" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/inc/footer_nav_studiow.html">
+    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_blog_top.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="170" selection-start="618" selection-end="618" vertical-scroll-proportion="-6.4">
+        <state line="8" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/inc/watching_box.html">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="5" selection-start="403" selection-end="403" vertical-scroll-proportion="-5.76">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/inc/show_watching_box.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="233" selection-end="233" vertical-scroll-proportion="-5.12">
+        <state line="8" column="19" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -521,58 +535,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_home_top.html">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="511" selection-end="511" vertical-scroll-proportion="-3.84">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="18.56">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_blog_sidebar.html">
+    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_home_left_sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="443" selection-end="443" vertical-scroll-proportion="-3.84">
+        <state line="7" column="19" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_search_sidebar.html">
+    <entry file="file://$PROJECT_DIR$/templates/video/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="443" selection-end="443" vertical-scroll-proportion="-3.84">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_video_sidebar.html">
+    <entry file="file://$PROJECT_DIR$/templates/shows/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="443" selection-end="443" vertical-scroll-proportion="-3.84">
+        <state line="45" column="20" selection-start="1089" selection-end="1089" vertical-scroll-proportion="-18.56">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_video_top.html">
+    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_ros_left_sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="472" selection-end="472" vertical-scroll-proportion="-3.84">
+        <state line="7" column="6" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_search_top.html">
+    <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="473" selection-end="473" vertical-scroll-proportion="-3.84">
+        <state line="55" column="59" selection-start="2165" selection-end="2165" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/inc/adbox_blog_top.html">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm10/python_stubs/-1698384448/itertools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="-5.12">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/video/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="118" selection-end="118" vertical-scroll-proportion="0.1360255">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="37" selection-start="4771" selection-end="4771" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="16" selection-start="651" selection-end="651" vertical-scroll-proportion="0.35897437">
           <folding />
         </state>
       </provider>

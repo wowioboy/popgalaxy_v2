@@ -32,10 +32,8 @@ html, body {
 }
 
 body {
-	background: url(/media/images/pagebg.svg) no-repeat #F4F3B7;
+	background: url(/media/images/popgalaxy_bg_01.jpg) top center no-repeat #32373a;
 	font-family: Arvo, sans-serif;
-	-o-background-size: 100% 100%;
-	-webkit-background-size: 100% 100%;
 }
 
 #container {
@@ -70,7 +68,7 @@ body {
 }
 
 #connect {
-	width: 997px;
+	width: 985px;
 	height: 60px;
 	margin: 0 auto;
 	background: url(/media/images/connect.png);
@@ -80,10 +78,8 @@ body {
 }
 
 #footer {
-	width: 955px;
-	width: 997px;
+	width: 985px;
 	margin: 0 auto 30px auto;
-	min-height: 310px;
 	background: url(/media/images/footerbg.png) no-repeat #1B2023 bottom right;
 	margin-left: 0px;
 }
@@ -646,12 +642,9 @@ ul#follownav li.first {
 }
 
 #sectionTitle, .resultsTitle {
-	padding: 10px;
-	height: 20px;
-	line-height: 30px;
-	background: #666;
+	height: 35px;
+	line-height: 35px;
 	font-weight: bold;
-	margin-bottom: 15px;
 	text-transform: uppercase;
 	font-size: 18px;
 	color: #fff;
@@ -713,28 +706,6 @@ ul#follownav li.first {
 
 .readMore a:visited {
 	color: #b11e1c;
-}
-
-#videoList .resultsTitle {
-	margin-bottom: 0;
-	margin-left: 15px;
-}
-
-#sectionTitle, .resultsTitle {
-	padding: 10px;
-	height: 20px;
-	line-height: 30px;
-	background: #666;
-	font-weight: bold;
-	margin-bottom: 15px;
-	text-transform: uppercase;
-	font-size: 18px;
-	color: #fff;
-}
-
-#videoList .resultsTitle {
-	margin-bottom: 0;
-	margin-left: 15px;
 }
 
 #entriesList {
@@ -806,10 +777,12 @@ ul#follownav li.first {
 }
 
 #resultsHeader {
-	color: #999;
-	font-family: Visitor, sans-serif;
-	font-size: 24px;
-	line-height: 18px;
+	height: 24px;
+	color: #fff;
+	font-family: Arvo, sans-serif;
+	font-weight:normal;
+	font-size: 18px;
+	line-height: 24px;
 }
 
 .resultSet {
@@ -1218,8 +1191,14 @@ ul#featuredNav li img:hover {
 	padding: 15px;
 }
 
-ul#footerNav {
-	display: inline;
+#footerNav {
+	width:  955px;
+	height: 20px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+#footerNav ul {
 	list-style: none;
 	color: #fff;
 	font-weight: bold;
@@ -1227,11 +1206,11 @@ ul#footerNav {
 	font-size: 14px;
 }
 
-ul#footerNav li {
+#footerNav ul li {
 	display: inline;
 }
 
-ul#footerNav li a {
+#footerNav ul li a {
 	margin-right: 20px;
 	float: left;
 	text-align: center;
@@ -1241,7 +1220,7 @@ ul#footerNav li a {
 	vertical-align: middle;
 }
 
-ul#footerNav li a:hover {
+#footerNav ul li a:hover {
 	background: #ddd;
 }
 
@@ -1300,3 +1279,41 @@ ul#footerNav li a:hover {
 	height: 35px;
 	width: 90px;
 }
+
+
+
+
+#copyright {
+	margin-right: 200px;
+	color: #fff;
+	font-size: 10px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+#studiowFooterNav {	width: 955px; height: 50px;	background: #5A7070; padding: 0; margin: 0 0 15px 0;}
+
+#studiowFooterNav ul { width: 955px;  list-style: none; margin: 0;	padding: 0;}
+
+#studiowFooterNav ul li { display: inline; }
+
+#studiowFooterNav ul li a { height: 50px; display: inline-block; background: url(/media/images/sprites/studiow_footerNavBar.png) ;overflow:hidden; text-indent:-9999px;}
+
+#studiowFooterNav ul li a#swfWow { width: 129px; background-position: -155px 0; }
+#studiowFooterNav ul li a#swfDuc { width: 81px; background-position: -284px 0; }
+#studiowFooterNav ul li a#swfPop { width: 102px; background-position: -366px 0; }
+#studiowFooterNav ul li a#swfSdg { width: 136px; background-position: -466px 0; }
+#studiowFooterNav ul li a#swfStu { width: 155px; background-position: 0 0; margin-left:336px}
+
+#studiowFooterNav ul li a#swfWow:hover { background-position: -155px -100px; }
+#studiowFooterNav ul li a#swfDuc:hover { background-position: -284px -100px; }
+#studiowFooterNav ul li a#swfPop:hover { background-position: -366px -100px; }
+#studiowFooterNav ul li a#swfSdg:hover { background-position: -466px -100px; }
+#studiowFooterNav ul li a#swfStu:hover { background-position: 0 -100px; }
+
+#studiowFooterNav ul li a#swfWow:active { background-position: -155px -150px; }
+#studiowFooterNav ul li a#swfDuc:active { background-position: -284px -150px; }
+#studiowFooterNav ul li a#swfPop:active { background-position: -366px -150px; }
+#studiowFooterNav ul li a#swfSdg:active { background-position: -466px -150px; }
+#studiowFooterNav ul li a#swfStu:active { background-position: 0 -150px; }

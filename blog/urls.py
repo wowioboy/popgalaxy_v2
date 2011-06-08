@@ -5,29 +5,16 @@ from tagging.views import tagged_object_list
 from blog.models import Entry
 from blog.views import *
 from headlines.models import *
+from shows.models import *
 
 headlines = Headline.objects.filter(isactive=1)
-"""
-auth = tweepy.OAuthHandler(settings.CONSUMER_KEY, settings.CONSUMER_SECRET)
-auth.set_access_token(settings.ACCESS_TOKEN, settings.ACCESS_SECRET)
-api = tweepy.API(auth)
-pop_timeline = api.user_timeline()
-dd_timeline = api.user_timeline('drunkduck')
-wv_timeline = api.user_timeline('wevoltonline')
-mentions = api.mentions()
-tweets = {
-  'pop_timeline':pop_timeline,
-  'dd_timeline':dd_timeline,
-  'wv_timeline':wv_timeline,
-  'mentions':mentions
-}
-"""
 
+shows = Show.objects.filter(isactive=1)
 entries = Entry.objects.order_by('-pub_date','title').filter(status=1)
 data_dict = {
 	'queryset': entries,
 	'date_field': 'pub_date',
-    #'extra_context':{'tweets':tweets,'headlines':headlines},
+    'extra_context':{'shows':shows,'headlines':headlines},
 }
 
 urlpatterns = patterns('django.views.generic.date_based',

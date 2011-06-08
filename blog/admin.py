@@ -13,7 +13,7 @@ class EntryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug" : ('title',)}
     fieldsets = [
         ('Section Visibility', {'fields':[('incomics','ingames','inmusic','infilm','intv','inint','inextra')],'classes':['expand']}),
-		('Entry Details', {'fields': (('carousel', 'enable_comments'), 'status', 'pub_date', ('title', 'slug'), 'subtitle',('author','show'), 'tags', ('carousel_text', 'carousel_subtext'), ('thumbnail', 'featuredthumb'), 'body_markdown')}),
+		('Entry Details', {'fields': (('carousel', 'enable_comments'), 'status', 'pub_date', ('title', 'slug'), 'subtitle',('author','show'), 'tags', 'source', ('carousel_text', 'carousel_subtext'), ('thumbnail', 'featuredthumb'), 'body_markdown')}),
     ]
     formfield_overrides = {
         models.TextField: {'widget': TinyMCE(attrs={'cols': 100, 'rows': 40})}, 

@@ -7,7 +7,7 @@
 
 <div class="seemore">
 	<ul>
-        {% for video in related_videos %}
+        {% for video in sidebar_videos %}
         <li><a href="{{ video.get_absolute_url }}" >
 	        <span class="seemoreThumb" ><img src="{{ video.thumbnail.thumb_url }}" border="0"/></span>
 	        <span class="seemoreTitle">{{ video.title }}</span><br/>

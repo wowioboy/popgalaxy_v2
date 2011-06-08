@@ -14,11 +14,17 @@
 
 <title>{% block pagetitle %}{% endblock %}</title>
 
-<link href='http://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ MEDIA_URL }}fonts/stylesheet.css" type="text/css" media="screen, projection" />
-<link rel="stylesheet" href="{{ MEDIA_URL }}style/style.css" type="text/css" media="screen, projection">
-<link rel="stylesheet" href="{{ MEDIA_URL }}style/popgalaxyoverride.css" type="text/css" media="screen, projection">
-<link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.png">
+    <link href='http://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ MEDIA_URL }}fonts/stylesheet.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="{{ MEDIA_URL }}style/fonts.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="{{ MEDIA_URL }}style/style.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="{{ MEDIA_URL }}style/popgalaxyoverride.css" type="text/css" media="screen, projection">
+    {#<link rel="stylesheet" href="{{ MEDIA_URL }}style/promotion.css" type="text/css" media="screen, projection">#}
+    <link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.png" type="image/x-icon">
+
+    {% if category %}
+    <link rel="stylesheet" href="{{ MEDIA_URL }}style/category_{{ category }}.css" type="text/css" media="screen, projection" />
+    {% endif %}
 {% include "inc/google_analytics.html" %}
 </head>
 <body>
@@ -35,7 +41,6 @@
 
 <div id="headernav">
 {% include "inc/nav.html" %}
-{% include "inc/search.html" %}
 </div>
 
 </div><!--END HEADER-->
@@ -54,5 +59,23 @@
 <div id="contentclear"></div>
 </div><!--END PAGE CONTENT-->
 
+<script type="text/javascript">
+function click_shows(){
+	shows_box = $('#shows_box');
+	content_div = $('#content');
+	if (shows_box.is(':visible')){
+		shows_box.fadeOut();
+		content_div.animate({marginTop: '0px'});
+	} else {
+		shows_box.fadeIn();
+		content_div.animate({marginTop: '200px'});
+	}
+	return false;
+}
+
+function click_search(){
+
+}
+</script>
 
 {% include "inc/footer.html" %}

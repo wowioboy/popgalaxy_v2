@@ -2,30 +2,57 @@
 <div class="box">
 <div class="boxIcon"></div>
 <div class="boxHeader colorHeader">WATCHING</div>
-<div class="boxNav">
+<!-- <div class="boxNav">
 <ul>
-<li><a href="#" class="selected">Week</a></li>
-<li><a href="#">Month</a></li>
-<li><a href="#">All-Time</a></li>
+<li><a class="selected" onclick="return switch_menu('weekly');">Week</a></li>
+<li><a onclick="return switch_menu('monthly');">Month</a></li>
+<li><a onclick="return switch_menu('alltime');">All-Time</a></li>
 </ul>
-</div>
+</div> -->
 <div class="boxBody">
 
 
-<div class="seemore">
-	<ul>
-        {% for video in latest_videos %}
-        <li><a href="{{ video.get_absolute_url }}" >
-	        <span class="seemoreThumb" ><img src="{{ video.thumbnail.thumb_url }}" border="0"/></span>
-	        <span class="seemoreTitle">{{ video.title }}</span><br/>
-            <span class="seemoreSubTitle">{{ video.subtitle }}</span><br/>
-	        <span class="seemoreCount">0 views</span>
-	        </a>
-        </li>
-        {% endfor %}
-	</ul>
-</div>
+    <div class="seemore">
+	    <ul>
+            {% for video in latest_videos %}
+            <li><a href="{{ video.get_absolute_url }}" >
+	            <span class="seemoreThumb" ><img src="{{ video.thumbnail.thumb_url }}" border="0"/></span>
+	            <span class="seemoreTitle">{{ video.title }}</span><br/>
+                <span class="seemoreSubTitle">{{ video.subtitle }}</span><br/>
+	            <span class="seemoreCount">0 views</span>
+	            </a>
+            </li>
+            {% endfor %}
+	    </ul>
+    </div>
 
+    <div class="seemore_monthly" style="display:none;">
+        <ul>
+            {% for video in latest_videos %}
+            <li><a href="{{ video.get_absolute_url }}" >
+                <span class="seemoreThumb" ><img src="{{ video.thumbnail.thumb_url }}" border="0"/></span>
+                <span class="seemoreTitle">{{ video.title }}</span><br/>
+                <span class="seemoreSubTitle">{{ video.subtitle }}</span><br/>
+                <span class="seemoreCount">0 views</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="seemore_alltime" style="display:none;">
+        <ul>
+            {% for video in latest_videos %}
+            <li><a href="{{ video.get_absolute_url }}" >
+                <span class="seemoreThumb" ><img src="{{ video.thumbnail.thumb_url }}" border="0"/></span>
+                <span class="seemoreTitle">{{ video.title }}</span><br/>
+                <span class="seemoreSubTitle">{{ video.subtitle }}</span><br/>
+                <span class="seemoreCount">0 views</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 
 
 </div>

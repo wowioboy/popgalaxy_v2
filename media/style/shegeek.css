@@ -4,9 +4,7 @@ html, body {
 }
 
 body {
-    background: #033B59 url(/media/images/pagebg.svg);
-	-o-background-size: 100% 100%;
-	-webkit-background-size: 100% 100%;
+    background: #7f9fac url(/media/images/pg_bg_sheg.jpg) top center fixed;
 }
 
 #headerlogo a {

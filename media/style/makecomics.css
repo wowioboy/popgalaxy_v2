@@ -4,9 +4,7 @@ html, body {
 }
 
 body {
-    background: #033B59 url(/media/images/pagebg.svg);
-	-o-background-size: 100% 100%;
-	-webkit-background-size: 100% 100%;
+    background: #999 url(/media/images/pg_bg_make.jpg) top center fixed;
 }
 
 #headerlogo a {
@@ -81,7 +79,7 @@ ul#nav li a:hover {
 	width: 1005px;
 	margin-left: -15px;
 	mergin-right: -15px;
-    background-color: #ff9900;
+    background-color: #4e5169;
     color: #fff;
     text-transform: uppercase;
 	overflow: hidden;

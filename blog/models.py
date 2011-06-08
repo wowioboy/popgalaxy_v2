@@ -28,6 +28,7 @@ class Entry(models.Model):
     subtitle = models.CharField(max_length=200,blank=True,null=True)
     carousel_text = models.CharField('Carousel Text',max_length=25,blank=True,null=True)
     source = models.URLField('Entry Source URL',max_length=255,blank=True,null=True)
+    source_copy = models.CharField('Source Sentence', max_length=50,blank=True,null=True)
     carousel_subtext = models.CharField('Carousel Sub-text',max_length=15,blank=True,null=True)
     leadin_html = models.TextField(blank=True,null=True)
     leadin_markdown = models.TextField('Lead-in Content',blank=True,null=True)

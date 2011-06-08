@@ -37,6 +37,13 @@
 		{% endif %}
 		</div>
 		{{ object.body_html|safe }}
+        {% if object.source %}
+            {% if object.source_copy %}
+                <a href="{{ object.source }}" target="_blank">{{ object.source_copy }}</a>
+            {% else %}
+                <a href="{{ object.source }}" target="_blank">Read More >>></a>
+            {% endif %}
+        {% endif %}
 	</div>
 
 

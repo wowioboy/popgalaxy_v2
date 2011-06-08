@@ -65,7 +65,7 @@
 				{% if item.details %}
 				{{ item.details|safe|truncatewords_html:25 }}
 				{% else %}
-				{{ item.body_html|striptags|truncatewords_html:25 }}
+				{{ item.body_html|safe|truncatewords_html:25 }}
 				{% endif %}
 				</span>
 			</div>

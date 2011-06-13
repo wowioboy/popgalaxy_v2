@@ -38,7 +38,7 @@ class Entry(models.Model):
     tags = TagAutocompleteField('Tags',help_text='Keywords to help searching for content.')
     enable_comments = models.BooleanField(default=True)
     status = models.IntegerField('Publish Status',choices=PUB_STATUS, default=0)
-    thumbnail = ThumbnailImageField(verbose_name="Small Thumbnail",upload_to='thumbs',help_text='Dimensions = 200x113',blank=True,null=True)
+    thumbnail = ThumbnailImageField(verbose_name="Small Thumbnail",upload_to='thumbs',help_text='Dimensions = 200x113')
     featuredthumb = FeaturedThumbnailImageField(verbose_name="Featured Image",upload_to='thumbs/featured/blog',help_text='Dimensions = 640x360',blank=True,null=True)
     slug = models.SlugField(
         unique_for_date='pub_date',

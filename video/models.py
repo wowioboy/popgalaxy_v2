@@ -26,7 +26,7 @@ class Video(models.Model):
     intv = models.BooleanField('Show in TV?',default=True)
     inint = models.BooleanField('Show in Interactive?',default=True)
     inextra = models.BooleanField('Show in Extra?',default=True)
-    thumbnail = ThumbnailImageField("Thumbnail Image",upload_to='thumbs',help_text='Dimensions = 200x113',blank=True,null=True)
+    thumbnail = ThumbnailImageField("Thumbnail Image",upload_to='thumbs',help_text='Dimensions = 200x113')
     featuredthumb = FeaturedThumbnailImageField("Featured Image",upload_to='thumbs/featured/video',help_text='Dimensions = 640x360',blank=True,null=True)
     title = models.CharField(max_length=255)
     subtitle = models.CharField(max_length=200,blank=True,null=True)

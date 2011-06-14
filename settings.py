@@ -78,7 +78,7 @@ elif hostname == 'Moonbase-Three.local':
     MEDIA_ROOT = '/Users/zach_pennington/Sites/popgalaxy_new/media/'
 elif hostname == 'The-Flying-Tomato.local':
     MEDIA_ROOT = '/Users/asher/Sites/popgalaxy_new/media/'
-elif hostname == 'event-10-1-39-75.venue.apple.com':
+elif hostname == 'event-10-2-6-160.venue.apple.com':
     MEDIA_ROOT = '/Users/zeus/Desktop/Dropbox/Sites/django/popgalaxy_new/media/'
 else:
     MEDIA_ROOT = '/home/popgalaxy/public_html/popgalaxy/media/'

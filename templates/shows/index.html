@@ -42,7 +42,9 @@
 </div>
 
 <div>
-	<div id="adLeft" style="display: inline-block; height: 600px; width: 160px; margin-left: 15px; vertical-align: top;"></div>
+
+    {% include "inc/adbox_ros_left_sidebar.html" %}
+
 	<div id="newsItems" >
 		{% autopaginate latest_items 5 %}
 		{% for item in latest_items %}

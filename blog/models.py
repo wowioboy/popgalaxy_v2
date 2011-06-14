@@ -28,6 +28,7 @@ class Entry(models.Model):
     subtitle = models.CharField(max_length=200,blank=True,null=True)
     carousel_text = models.CharField('Carousel Text',max_length=25,blank=True,null=True)
     source = models.URLField('Entry Source URL',max_length=255,blank=True,null=True)
+    source_copy = models.CharField('Source Sentence', max_length=50,blank=True,null=True)
     carousel_subtext = models.CharField('Carousel Sub-text',max_length=15,blank=True,null=True)
     leadin_html = models.TextField(blank=True,null=True)
     leadin_markdown = models.TextField('Lead-in Content',blank=True,null=True)
@@ -37,7 +38,7 @@ class Entry(models.Model):
     tags = TagAutocompleteField('Tags',help_text='Keywords to help searching for content.')
     enable_comments = models.BooleanField(default=True)
     status = models.IntegerField('Publish Status',choices=PUB_STATUS, default=0)
-    thumbnail = ThumbnailImageField(verbose_name="Small Thumbnail",upload_to='thumbs',help_text='Dimensions = 200x113',blank=True,null=True)
+    thumbnail = ThumbnailImageField(verbose_name="Small Thumbnail",upload_to='thumbs',help_text='Dimensions = 200x113')
     featuredthumb = FeaturedThumbnailImageField(verbose_name="Featured Image",upload_to='thumbs/featured/blog',help_text='Dimensions = 640x360',blank=True,null=True)
     slug = models.SlugField(
         unique_for_date='pub_date',

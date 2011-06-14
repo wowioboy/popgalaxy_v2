@@ -7,7 +7,6 @@ from shows.models import *
 from headlines.models import *
 
 
-
 ########################################
 def show_page(request, slug='shegeek'):
 
@@ -33,21 +32,10 @@ def show_page(request, slug='shegeek'):
     api = tweepy.API(auth)
     try:
       pop_timeline = api.user_timeline(count=100) # PG's timeline
-      #mentions = api.mentions()	# PG's @mentions
-      #dd_timeline = api.user_timeline('drunkduck') # DD's tweets
-      #wowio_timeline = api.user_timeline('wowio') # WOWIO's tweets
-      #wv_timeline = api.user_timeline('wevoltonline') # WEVolt's tweets
     except:
       pop_timeline = []
-      #dd_timeline = []
-      #wowio_timeline = []
-      #wv_timeline = []
     tweets = {
       'pop_timeline':pop_timeline,
-      #'dd_timeline':dd_timeline,
-      #'wv_timeline':wv_timeline,
-      #'wowio_timeline':wowio_timeline,
-      #'mentions':mentions
     }
   
     variables = RequestContext(request,{

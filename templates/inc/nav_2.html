@@ -1,135 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-
-	<script charset="utf-8" src="{{ MEDIA_URL }}svgweb/svg.js" data-path="svgweb" type="text/javascript"></script> 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script> 
-	<script charset="utf-8" src="{{ MEDIA_URL }}js/jquery.cycle.all.2.72.js" type="text/javascript"></script> 
-	<script charset="utf-8" src="{{ MEDIA_URL }}js/jquery.ztwitterfeed.js" type="text/javascript"></script> 
-	<script charset="utf-8" src="{{ MEDIA_URL }}js/jquery.vticker-min.js" type="text/javascript"></script>
-	<script charset="utf-8" src="{{ MEDIA_URL }}js/jquery.color.js" type="text/javascript"></script> 
-	
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-
-<title>{% block pagetitle %}{% endblock %}</title>
-
-<link rel="stylesheet" href="{{ MEDIA_URL }}style/fonts.css" type="text/css" media="screen, projection">
-<link rel="stylesheet" href="{{ MEDIA_URL }}style/style.css" type="text/css" media="screen, projection">
-<link rel="stylesheet" href="{{ MEDIA_URL }}style/popgalaxyoverride.css" type="text/css" media="screen, projection">
-<link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.png">
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19498710-1']);
-  _gaq.push(['_trackPageview']);
+$(document).ready(function(){
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+        $(".slidingDiv").hide();
+        $(".show_hide").show();
+
+	$('.show_hide').click(function(){
+	$(".slidingDiv").slideToggle();
+	});
+
+});
 
 </script>
-</head>
-<body>
 
-<style>
-#navBar {
-	width: 985px;
-	height: 40px;
-	display: block;
-	background: red; <!--remove this later-->
-	color: white;
-}
-#navBar ul {
-	width: 985px;
-	height: 40px;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-#navBar ul li {
-	display:inline;
-}
-#navBar ul li a, #navBar ul li h3 {
-	display: inline-block;
-	line-height: 40px;
-	font-family: Arvo, sans-serif;
-	font-weight: bold;
-	text-decoration: none;
-	padding: 0 7.5px;
-	color: white;
-	text-transform: uppercase;
-	text-align: center;
-	margin: 0;
-}
-#navBar ul li a:hover {
-	background: rgba(0,0,0,.5)
-}
+<script type="text/javascript">
 
+$(document).ready(function(){
 
-#navBar ul li h3#shows {
-	width: 140px;
-	font-size: 20px;
-}
-#navBar ul li h3#shows:hover {
+        $(".slidingDiv2").hide();
+        $(".show_hide2").show();
 
-}
-#navBar ul li h3#shows:active {
-	
-}
-#navBar ul li h3#search {
-	float: right;
-	width: 40px;
-}
-#navBar ul li h3#search:hover {
-	
-}
-#navBar ul li h3#search:active {
-	
-}
+	$('.show_hide2').click(function(){
+	$(".slidingDiv2").slideToggle();
+	});
 
-#showsBox {
-	width: 955px;
-	padding: 15px;
-	height: 200px;
-	display: box;
-	background-color: #F4F3B7; /* fallback color if gradients are not supported */
-
-  	background-image: -webkit-linear-gradient(top, #F4F3B7 85%, #E0DC31); 
-  	background-image:    -moz-linear-gradient(top, #F4F3B7 85%, #E0DC31); 
-  	background-image:     -ms-linear-gradient(top, #F4F3B7 85%, #E0DC31); 
-  	background-image:      -o-linear-gradient(top, #F4F3B7 85%, #E0DC31); 
-  	background-image:         linear-gradient(top, #F4F3B7 85%, #E0DC31); /* standard, but currently unimplemented */}
-
-#showsBox, #searchBox {
-<!--	display: none;-->
-}
-
-</style>
-
-<script>
-$(document).ready(function() {
-  $('div.navShow> div').hide();  
-  $('div.navShow> h3').click(function() {
-    var $nextDiv = $(this).next();
-    var $visibleSiblings = $nextDiv.siblings('div:visible');
- 
-    if ($visibleSiblings.length ) {
-      $visibleSiblings.slideUp('fast', function() {
-        $nextDiv.slideToggle('fast');
-      });
-    } else {
-       $nextDiv.slideToggle('fast');
-    }
-  });
 });
-</script> 
 
-<div id="navBar" class="navShow">
+</script>
+
+
+<div id="navBar" class="navShow colorBackgroundHeader">
 <ul>
-	<li><h3 id="shows" name="showsBox">Shows</h3></li>
+	<li><a id="shows" class="show_hide">Shows</a></li>
 	<li><a href="/comics/" id="comics">Comics</a></li>
 	<li><a href="/music/" id="music">Music</a></li>
 	<li><a href="/games/" id="games">Games</a></li>
@@ -137,26 +39,27 @@ $(document).ready(function() {
 	<li><a href="/tv/" id="tv">TV</a></li>
 	<li><a href="/interactive/" id="interactive">Interactive</a></li>
 	<li><a href="/extras/" id="extra">Extra</a></li>
-	<li><h3 id="search" name="searchBox">Search</h3></li>	
+	<li><a id="search" class="show_hide2">Search</a></li>	
 </ul>
 </div>
-<div id="showsBox" >
+<div id="showsBox" class="slidingDiv" >
 	{% for show in shows %}
-	<span style="display: inline-block; margin-right: 15px;">
+	<div class="showMenuItem">
+	
+
+	
 		{% if show.thumbnail %}
-		<div style="background: #000; width: 200px; height: 120px;">
-			<a href="{{ show.get_absolute_url }}"><img src="{{ show.thumbnail.thumb_url }}"></a>
+		<div>
+			<a href="{{ show.get_absolute_url }}" class="linkShowThumb"><img src="{{ show.thumbnail.thumb_url }}"></a>
 		</div>
 		{% endif %}
-		<p><a href="{{ show.get_absolute_url }}">{{ show.title }}</a></p>
+		<div class="showMenuCategory colorHeader">Category</div>
+		<h1><a href="{{ show.get_absolute_url }}">{{ show.title }}</a></h1>
 		<p>{{ show.relatedvideos.count }} episode{% if show.relatedvideos.count != 1 %}s{% endif %}</p>
-	</span>	
+	</div>	
 	{% endfor %}
 		
 </div>
-<div id="searchBox">
+<div id="searchBox" class="slidingDiv2">
 <form method="post" action=""><input type="text" name="" value="Search the POP Galaxy" /></form>
 </div>
-
-
-</body></html>

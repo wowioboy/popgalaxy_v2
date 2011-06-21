@@ -41,13 +41,6 @@ ul#nav li a#shows {
 	background-position: -355px 0px;
 }
 
-#content,
-#headernav,
-#headerheadlines{
-	background: #45b8bf;
-}
-
-
 .boxHeader{
 	background: #4e5169;
 }
@@ -76,4 +69,40 @@ ul#nav li a#shows {
 ul#follownav li {
 	background: url(/media/images/sprites/pg_sprites_01-comic.png) no-repeat;
 	background-position: -285px 0;
+}
+
+/*CATEGORY COLORS*/
+
+.colorBackground {
+	background-color: #45b8bf;
+}
+
+.colorBackgroundHeader {
+	background: #4e5169;
+	color: #fff;
+}
+
+.colorBackgroundSidebar {
+	background: #a1d72f;
+}
+
+a.colorLinkHeader {
+	color: #fff;
+}
+
+a.colorLinkSidebar {
+	color: 
+}
+
+a.colorLinkFooter {
+	color: #fff;
+}
+
+a.colorButton {
+	background: #1B2023;
+	color: #fff;
+}
+
+.colorTextSidebar {
+	
 }

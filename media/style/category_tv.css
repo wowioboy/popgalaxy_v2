@@ -42,22 +42,6 @@ ul#nav li a#shows {
 	background-position: -355px 0px;
 }
 
-#content,
-#headernav,
-#headerheadlines{
-	background: #316082;
-}
-
-
-.boxHeader{
-	background: #99d420;
-}
-
-.boxBody, 
-.box{
-	background: #45b8bf;
-}
-
 #feedHeader, .boxHeader {
 	/*
 	background: #94D0A5 url(/media/images/iconPGgreen.png) 5px 5px no-repeat;
@@ -77,4 +61,40 @@ ul#nav li a#shows {
 ul#follownav li {
 	background: url(/media/images/sprites/pg_sprites_01-tv.png) no-repeat;
 	background-position: -285px 0;
+}
+
+/*CATEGORY COLORS*/
+
+.colorBackground {
+	background-color: #316082;
+}
+
+.colorBackgroundHeader {
+	background: #99d420;
+	color: #fff;
+}
+
+.colorBackgroundSidebar {
+	background: #45b8bf;
+}
+
+a.colorLinkHeader {
+	color: #fff;
+}
+
+a.colorLinkSidebar {
+	color: 
+}
+
+a.colorLinkFooter {
+	color: #fff;
+}
+
+a.colorButton {
+	background: #1B2023;
+	color: #fff;
+}
+
+.colorTextSidebar {
+	
 }

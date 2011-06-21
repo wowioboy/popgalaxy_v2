@@ -40,9 +40,6 @@
 
 {% include "inc/headlines.html" %}
 
-<div id="headernav">
-{% include "inc/nav.html" %}
-</div>
 
 </div><!--END HEADER-->
 
@@ -50,6 +47,10 @@
 
 <!--BEGIN PAGE CONTENT-->
 <div id="content">
+
+	{% include "inc/nav_2.html" %}
+	
+
 	{% block content %}{% endblock %}
 </div><!--END MAIN COLUMN CONTENT-->
 

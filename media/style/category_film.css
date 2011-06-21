@@ -42,23 +42,6 @@ ul#nav li a#shows {
 	background-position: -355px 0px;
 }
 
-
-#content,
-#headernav,
-#headerheadlines{
-	background: #b22266;
-}
-
-
-.boxHeader{
-	background: #c5bb3a;
-}
-
-.boxBody, 
-.box{
-	background: #2b182c;
-}
-
 #feedHeader, .boxHeader {
 	/*
 	background: #94D0A5 url(/media/images/iconPGgreen.png) 5px 5px no-repeat;
@@ -81,6 +64,39 @@ ul#follownav li {
 	background-position: -285px 0;
 }
 
-.tweetLi a {
+
+/*CATEGORY COLORS*/
+
+.colorBackground {
+	background-color: #b22266;
+}
+
+.colorBackgroundHeader {
+	background: #c5bb3a;
+	color: #fff;
+}
+
+.colorBackgroundSidebar {
+	background: #2b182c;
+}
+
+a.colorLinkHeader {
+	color: #fff;
+}
+
+a.colorLinkSidebar {
 	color: #c5bb3a;
+}
+
+a.colorLinkFooter {
+	color: #fff;
+}
+
+a.colorButton {
+	background: #1B2023;
+	color: #fff;
+}
+
+.colorTextSidebar {
+	
 }

@@ -13,21 +13,41 @@ body {
 	/* z-index: 200; */
 }
 
-#content,
-#headernav,
-#headerheadlines{
-	background: #033B59;
+/*CATEGORY COLORS*/
+
+.colorBackground {
+	background-color: #14b2bf;
 }
 
-.box {
-	background: #E8E6CA;
-}
-
-.colorHeader {
+.colorBackgroundHeader {
 	background: #809EAD;
 	color: #fff;
 }
 
+.colorBackgroundSidebar {
+	background: #3fa9f5;
+}
+
+a.colorLinkHeader {
+	color: #fff;
+}
+
+a.colorLinkSidebar {
+	color: #4c4d4f;
+}
+
+a.colorLinkFooter {
+	color: #fff;
+}
+
+a.colorButton {
+	background: #1B2023;
+	color: #fff;
+}
+
+.colorTextSidebar {
+	
+}
 
 .boxIcon {
 	background: url(/media/images/sprites/pg_sprites_shows_01-make.png) no-repeat top left;

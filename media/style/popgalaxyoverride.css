@@ -73,6 +73,7 @@ HEADER & PAGE NAV
 	color: white;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 #navBar ul {
 	width: 985px;
@@ -1250,6 +1251,14 @@ a.colorButton {
 .colorTextSidebar {
 	
 }
+
+.colorcomics {background:rgba(87,89,106,.75)}
+.colormusic {background:rgba(79,193,178,.75)}
+.colorgames {background:rgba(247,146,30,.75)}
+.colorfilm {background:rgba(204,187,81,.75)}
+.colortv {background:rgba(166,206,57,.75)}
+.colorinteractive {background:rgba(231,14,122,.75)}
+.colorextra, .colorextras {background:rgba(3,59,89,.75)}
 
 
 /* FONTS & LINKS

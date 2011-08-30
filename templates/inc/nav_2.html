@@ -53,7 +53,7 @@ $(document).ready(function(){
 			<a href="{{ show.get_absolute_url }}" class="linkShowThumb"><img src="{{ show.thumbnail.thumb_url }}"></a>
 		</div>
 		{% endif %}
-		<div class="showMenuCategory colorHeader">Category</div>
+		<!-- <div class="showMenuCategory colorHeader">Category</div> -->
 		<h1><a href="{{ show.get_absolute_url }}">{{ show.title }}</a></h1>
 		<p>{{ show.relatedvideos.count }} episode{% if show.relatedvideos.count != 1 %}s{% endif %}</p>
 	</div>	

@@ -43,18 +43,22 @@
 		{% autopaginate latest_items 5 %}
 		{% for item in latest_items %}
 			<div class="newsItem" >
+
 					<div class="newsItemLeft">
-					<div class="categoryBadge color{{ category }}">
-					{% if category %}
-					{{ category }}
-					{% else %}
-					{{ item|get_tag }}
-					{% endif %}
+                        {% comment %}
+                        <div class="categoryBadge color{{ category }}">
+					    {% if category %}
+					        {{ category }}
+					    {% else %}
+					        {{ item|get_tag }}
+					    {% endif %}
+					    </div>
+					    {% endcomment %}
+					    <a href="{{ item.get_absolute_url }}">
+					    <img src="{{ item.thumbnail.thumb_url }}" class="newsItemThumb" border="0" />
+					    </a>
 					</div>
-					<a href="{{ item.get_absolute_url }}">
-					<img src="{{ item.thumbnail.thumb_url }}" class="newsItemThumb" border="0" />
-					</a>
-					</div>						
+
 					<div class="newsItemText" >
 					<div class="newsItemDate color{{ category }}">posted {{ item.pub_date|date:"m.d.Y" }}</div>
 					<div class="newsHeader colorHeaderText"><a href="{{ item.get_absolute_url }}" >{{ item.title|safe|truncatewords_html:10|wordwrap:10 }}</a>

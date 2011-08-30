@@ -72,7 +72,7 @@ TEMPLATE_DEBUG = DEBUG
 # Set MEDIA_ROOT Location    
 if hostname == 'Zeus.local':
     MEDIA_ROOT = '/Users/zeus/Desktop/Dropbox/Sites/django/popgalaxy_new/media/'
-elif hostname == 'Lawrence-Leachs-Mac-Pro.local':
+elif hostname == 'Coltrane.local':
     MEDIA_ROOT = '/Users/lawrenceleach/Dropbox/Sites/django/popgalaxy_new/media/'
 elif hostname == 'Moonbase-Three.local':
     MEDIA_ROOT = '/Users/zach_pennington/Sites/popgalaxy_new/media/'
@@ -204,7 +204,7 @@ else:
         'popgalaxy_new.video',
         'popgalaxy_new.headlines',
         'popgalaxy_new.search',
-        'popgalaxy_new.corp',
+        'corp',
         'popgalaxy_new.shows',
         'popgalaxy_new.profiles',
         'popgalaxy_new.assetlocker',

@@ -1,9 +1,10 @@
 .DS_STORE
 *.pyc
+media/thumbs/*
 media/thumbs/**/*
-media/video/**/*
-media/shows/**/*
-media/assets/**/*
+media/video/*
+media/shows/*
+media/assets/*
 _build
 .idea
 .idea/workspace.xml

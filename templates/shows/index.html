@@ -51,6 +51,7 @@
 	{% for item in latest_items %}
 		<div class="newsItem" >
 				<div class="newsItemLeft">
+                {% comment %}
 				<div class="categoryBadge color{{ category }}">
 				{% if category %}
 				{{ category }}
@@ -58,6 +59,7 @@
 				{{ item|get_tag }}
 				{% endif %}
 				</div>
+				{% endcomment %}
 				<a href="{{ item.get_absolute_url }}">
 				<img src="{{ item.thumbnail.thumb_url }}" class="newsItemThumb" border="0" />
 				</a>

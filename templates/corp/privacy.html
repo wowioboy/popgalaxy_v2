@@ -1,0 +1,55 @@
+{% extends "base_subpage.html" %}
+{% load threadedcommentstags %}
+{% load gravatar %}
+
+{% block pagetitle %}
+	Pop Galaxy : Privacy Policy
+{% endblock %}
+
+{% block adblock %}
+	{% include "inc/adbox_blog_top.html" %}
+{% endblock %}
+
+{% block content %}
+<!--BEGIN MAIN COLUMN CONTENT-->
+<div id="maincol">
+<div class="boxTopCornerLeft"></div>
+<div id="pagecontent">
+<!-- START BLOG ENTRY -->
+	<div id="blogTopBar" class="colorBackgroundHeader">{{ object.pub_date|date:"m/d/Y" }}
+
+	<div id="shareBar" style="display:none;">
+	<ul>
+	<li><div id="fb"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=165396726857534&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="80" show_faces="false" font="arial"></fb:like></div></li>
+	<li><a href="http://" class="shareIcon shareTW"><span>Twitter</span></a></li>
+	<li><a href="http://" class="shareIcon shareDG"><span>Digg</span></a></li>
+	<li><a href="http://" class="shareIcon shareRD"><span>Reddit</span></a></li>
+	<li><a href="http://" class="shareIcon shareSU"><span>StumbleUpon</span></a></li>
+	</ul>
+	</div>
+
+	</div>
+	<div id="entryDetails">
+		<div id="titleArea">
+		    <h1>Privacy Policy</h1>
+		</div>
+
+		{{ content.details_html|safe }}
+	</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}
+
+{% block sideadblock %}
+	{% include "inc/adbox_blog_sidebar.html" %}
+{% endblock %}
+

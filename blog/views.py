@@ -155,8 +155,8 @@ def shuffle_dict(dict):
     keys = dict.keys()
     random.shuffle(keys)
     for key in keys:
-        print key
         newdict[key] = dict[key]
+        #print key
     return newdict
 
 ########################################

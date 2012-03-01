@@ -5,17 +5,40 @@
 <div class="boxBody">
 
  
-<div class="tweet">
+ 
+ <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+ <script>
+ new TWTR.Widget({
+   version: 2,
+   type: 'profile',
+   rpp: 3,
+   interval: 500,
+   width: 'auto',
+   height: 300,
+   theme: {
+     shell: {
+       background: '#559b7a',
+       color: '#ffffff'
+     },
+     tweets: {
+       background: '#94d0a5',
+       color: '#616161',
+       links: '#192912'
+     }
+   },
+   features: {
+     scrollbar: false,
+     loop: true,
+     live: true,
+     behavior: 'default'
+   }
+ }).render().setUser('thepopgalaxy').start();
+ </script>
+ 
+ 
+<!--<div class="tweet">
 	<ul>
-<!--
-{% for tweet in tweets.mentions %}
-<li>
-	<span class="tweetProfileIcon" ><img src="{{ tweet.user.profile_image_url|safe }}" width="16" height="16" /></span>
-	<span class="tweetText">{{ tweet.text }}</span>
-	<span class="tweetDate">{{ tweet.created_at|date:"m/d/Y h:j:s" }}</span>
-</li>
-{% endfor %}
--->
+
 
 {% for tweet in tweets.pop_timeline %}
 <li class="tweetLi"><a href="http://www.twitter.com/{{ tweet.user.screen_name }}" target="_new" class="colorLinkSidebar" >
@@ -50,7 +73,7 @@
 </li>
 {% endfor %}
 	</ul>
-</div>
+</div>-->
 
 <!-- 
 {% for tweet in tweets %}

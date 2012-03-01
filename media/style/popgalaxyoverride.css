@@ -33,7 +33,8 @@ body {background: url(/media/images/popgalaxy_bg_01.jpg) top center no-repeat #3
 #header {width: 985px;height: 188px;}
 #content {width: 985px;margin: 0 auto;padding-bottom: 30px;}
 #maincol {width: 655px;float: left;margin-top: 15px;}
-#pagecontent {margin-left: -15px;width: 670px;background: #f9fad9;padding: 0 0 15px;}
+#pagecontent {margin-left: -15px;width: 670px;background: #fff;padding: 0 0 15px;}
+/*#pagecontent {margin-left: -15px;width: 670px;background: #f9fad9;padding: 0 0 15px;}*/
 #sidecol {width: 300px;float: left;margin-left: 15px;margin-top: 15px;}
 #connect {width: 985px;	height: 60px;margin: 0 auto;background: url(/media/images/connect.png);-o-background-size: 100% 100%;-webkit;background-size: 100% 100%;margin-left: 0px;}
 #footer {width: 985px;margin: 0 auto 30px auto;background-image: url(/media/images/footerbg.png) no-repeat bottom right;margin-left: 0px;}
@@ -309,8 +310,8 @@ AD SPOTS
 #videoPlayer {
 	width: 640px;
 	margin: 15px;
-	height: 392px;
-	background: #D62A27 url(/media/images/playerbg.png) no-repeat center;
+/*	height: 392px;*/
+	background: url(/media/images/playerbg.png) no-repeat center;
 }
 
 /*#videoNowPlaying {
@@ -785,8 +786,18 @@ ul#follownav li.first {
 	border-bottom: 1px #1B2023 solid;
 }
 
+#entryShare {
+	margin-top: 10px;
+	display: block;
+	padding: 5px 0;
+	border-bottom: 1px solid #559B7A;
+	border-top: 1px solid #559B7A;
+}
+
 .byLine {
 	clear: both;
+	margin: 5px 0;
+	font-weight: normal;
 	font-size: 14px;
 	color: #000;
 }
@@ -1161,8 +1172,9 @@ ul#featuredNav li img:hover {
 #titleArea h4 {
 	font-family: Arvo, Arial, sans-serif;
 	font-size: 20px;
-	font-weight: bold;
-	line-height: .9em;
+	font-weight: normal;
+	line-height: 1.3em;
+	margin: 5px 0;
 }
 
 #videoDetails, #entryDetails {

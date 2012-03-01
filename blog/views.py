@@ -1,5 +1,6 @@
 import tweepy
 import random
+import operator
 from django.db.models import Q
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import connection
@@ -89,6 +90,7 @@ def home_page(request, section=None):
   item_dict = {}
   for v in featured_videos:
       item_dict[v.id] = {}
+      item_dict[v.id]['pub_date'] = v.pub_date
       item_dict[v.id]['title'] = v.title
       item_dict[v.id]['thumbnail'] = v.thumbnail
       item_dict[v.id]['url'] = v.get_absolute_url()
@@ -97,13 +99,14 @@ def home_page(request, section=None):
 
   for b in featured_blogs:
       item_dict[b.id] = {}
+      item_dict[b.id]['pub_date'] = b.pub_date
       item_dict[b.id]['title'] = b.title
       item_dict[b.id]['thumbnail'] = b.thumbnail
       item_dict[b.id]['url'] = b.get_absolute_url()
       item_dict[b.id]['featuredthumb'] = b.featuredthumb
       item_dict[b.id]['type'] = 'blog'
 
-  featured_items = shuffle_dict(item_dict)
+  featured_items = sorted(item_dict.iteritems(), key=operator.itemgetter(1), reverse=True)
 
   
   tweets = {}

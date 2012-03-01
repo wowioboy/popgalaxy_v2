@@ -15,12 +15,9 @@
 <div id="maincol">
 {# <div id="videoPlayer">{{ featured_video.url_home|safe }}</div> #}
 <div id="featurethumbnails">
-    {% for index, item in featured_items.items %}
 
-
-
-
-        <div {% ifnotequal forloop.counter 1 %}style="display:none;"{% endifnotequal %}>
+    {% for index, item in featured_items %}
+        <div style="display:none;">
 		    <a href="{{ item.url }}"><img src="{{ MEDIA_URL }}{{ item.featuredthumb }}" {% if forloop.last %}class="last"{% endif %}/></a>
 	    </div>
 
@@ -31,7 +28,7 @@
 <div id="videoCarousel">
 
 	<ul id="featuredNav">
-        {% for index, itm in featured_items.items %}
+        {% for index, itm in featured_items %}
 		<li><a href="#"><img src="{{ itm.thumbnail.thumb_url }}"/></a></li>
 		{% endfor %}
         {% comment %}

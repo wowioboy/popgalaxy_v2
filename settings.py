@@ -70,8 +70,8 @@ TEMPLATE_DEBUG = DEBUG
 
 
 # Set MEDIA_ROOT Location    
-if hostname == 'Zeus.local':
-    MEDIA_ROOT = '/Users/zeus/Desktop/Dropbox/Sites/django/popgalaxy_new/media/'
+if hostname == 'Miles.local':
+    MEDIA_ROOT = '/Users/lawrenceleach/Dropbox/Sites/django/popgalaxy_new/media/'
 elif hostname == 'Coltrane.local':
     MEDIA_ROOT = '/Users/lawrenceleach/Dropbox/Sites/django/popgalaxy_new/media/'
 elif hostname == 'Moonbase-Three.local':

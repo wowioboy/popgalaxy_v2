@@ -1,4 +1,5 @@
 import tweepy
+import random
 from django.db.models import Q
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import connection
@@ -83,7 +84,26 @@ def home_page(request, section=None):
   latest_blogs = latest_blogs.order_by('-pub_date')
 
   latest_items = itertools.chain(latest_blogs, latest_videos)
-  featured_items = itertools.chain(featured_blogs,featured_videos)
+  #featured_items = itertools.chain(featured_blogs,featured_videos)
+
+  item_dict = {}
+  for v in featured_videos:
+      item_dict[v.id] = {}
+      item_dict[v.id]['title'] = v.title
+      item_dict[v.id]['thumbnail'] = v.thumbnail
+      item_dict[v.id]['url'] = v.get_absolute_url()
+      item_dict[v.id]['featuredthumb'] = v.featuredthumb
+      item_dict[v.id]['type'] = 'video'
+
+  for b in featured_blogs:
+      item_dict[b.id] = {}
+      item_dict[b.id]['title'] = b.title
+      item_dict[b.id]['thumbnail'] = b.thumbnail
+      item_dict[b.id]['url'] = b.get_absolute_url()
+      item_dict[b.id]['featuredthumb'] = b.featuredthumb
+      item_dict[b.id]['type'] = 'blog'
+
+  featured_items = shuffle_dict(item_dict)
 
   
   tweets = {}
@@ -129,6 +149,15 @@ def blog(request):
   })
   return render_to_response('blog/index.html', variables)
 
+
+def shuffle_dict(dict):
+    newdict = {}
+    keys = dict.keys()
+    random.shuffle(keys)
+    for key in keys:
+        print key
+        newdict[key] = dict[key]
+    return newdict
 
 ########################################
 def blog_entry(request, slug):

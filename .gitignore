@@ -6,5 +6,5 @@ media/video/*
 media/shows/*
 media/assets/*
 _build
-.idea
+.idea/*
 .idea/workspace.xml

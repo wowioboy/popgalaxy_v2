@@ -17,8 +17,16 @@
 <div id="featurethumbnails">
 
     {% for index, item in featured_items %}
-        <div style="display:none;">
-		    <a href="{{ item.url }}"><img src="{{ MEDIA_URL }}{{ item.featuredthumb }}" {% if forloop.last %}class="last"{% endif %}/></a>
+        <div style="display:none;" class="featureBox">
+		    <!--<a href="{{ item.url }}"><img src="{{ MEDIA_URL }}{{ item.featuredthumb }}" {% if forloop.last %}class="last"{% endif %}/></a>-->
+		    <a href="{{ item.url }}">
+		    	<img src="{{ MEDIA_URL }}{{ item.featuredthumb }}" class="featureBoxImage"/>
+		    	    <div class="featureBoxText">
+			    	    <h1>{{ item.title }}</h1>
+			        	<h2>{{ item.subtitle }}</h2>
+			    	</div>
+		    
+		    </a>
 	    </div>
 
 	{% endfor %}

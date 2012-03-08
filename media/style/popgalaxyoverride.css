@@ -361,6 +361,48 @@ FEATURE BOX
 ==============
 */
 
+.featureBox {
+	height: 360px;
+	width: 640px;
+	overflow: hidden;
+	position: relative;
+	z-index: 100;
+}
+
+.featureBox a {
+	text-decoration: none;
+}
+
+.featureBoxImage {
+	z-index: 200;
+	position: relative;
+}
+
+.featureBoxText {
+	position: absolute;
+	bottom: 0;
+	z-index: 300;
+	background: rgba(0,0,0,.5);
+	color: #fff;
+	width: 620px;
+	padding: 10px;
+}
+
+.featureBoxText h1 {
+	font-size: 48px;
+	line-height: .9em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.featureBoxText h2 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+
+
+
 /*
 SIDEBAR ELEMENTS
 ==============
